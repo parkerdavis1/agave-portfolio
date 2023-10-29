@@ -1,0 +1,349 @@
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
+		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+		Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #eee;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050f;
+	/* --text-color-link: rgb(152, 20, 40);
+	--text-color-link-active: rgb(152, 20, 40);
+	--text-color-link-visited: rgb(152, 20, 40); */
+	
+	--syntax-tab-size: 2;
+
+	/* fluid  */
+	--step--2: clamp(0.7813rem, 0.793rem + -0.0152vw, 0.79rem);
+	--step--1: clamp(0.8888rem, 0.8718rem + 0.0848vw, 0.9375rem);
+	--step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+	--step-1: clamp(1.125rem, 1.0467rem + 0.3913vw, 1.35rem);
+	--step-2: clamp(1.2656rem, 1.1424rem + 0.6163vw, 1.62rem);
+	--step-3: clamp(1.4238rem, 1.2429rem + 0.9043vw, 1.9438rem);
+	--step-4: clamp(1.6019rem, 1.3477rem + 1.2707vw, 2.3325rem);
+	--step-5: clamp(1.8019rem, 1.4549rem + 1.7348vw, 2.7994rem);
+
+	/* Major Second  */
+	--step--2: 0.889rem;
+	--step-0: 1rem;
+	--step-1: 1.125rem;
+	--step-2: 1.266rem;
+	--step-3: 1.424rem;
+	--step-4: 1.602rem;
+	--step-5: 1.802rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+	line-height: 1.7;
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+/* flow  */
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
+}
+:is(h1, h2, h3, blockquote) {
+	--flow-space: 1.5em;
+}
+
+:is(h1, h2, h3) + * {
+	--flow-space: 0.5em;
+}
+
+section {
+	margin-block-start: 4rem;
+}
+h1, h2, h3 {
+	line-height: 1.1;
+	text-wrap: balance;
+}
+h1 {
+	font-size: var(--step-5);
+}
+h2 {
+	font-size: var(--step-4);
+}
+h3 {
+	font-size: var(--step-3);
+}
+h4 {
+	font-size: var(--step-2);
+}
+h5 {
+	font-size: var(--step-1);
+}
+h6 {
+	font-size: var(--step-0);
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link-visited);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+	color: var(--text-color-link-visited);
+}
+
+main {
+	padding-inline: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	margin-block: 4rem;
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	position: relative;
+	left: 5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	padding: 1em;
+}
+.header-icon {
+	position: absolute;
+	left: -5rem;
+	height: 5rem;
+	width: 5rem;
+}
+
+.home-link {
+	font-size: 1.5em;
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:hover {
+	text-decoration: none;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	padding-inline: 1em;
+	border-right: 1px dotted var(--color-gray-50);
+}
+.nav-item:first-of-type {
+	padding-inline-start: 0;
+}
+.nav-item:last-of-type {
+	border: none;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	/* text-decoration: underline; */
+}
+
+/* Posts list */
+.list {
+	list-style: none;
+	padding: 0;
+}
+.postlist-item {
+	display: flex;
+	flex-direction: row;
+	/* flex-wrap: wrap; */
+	align-items: baseline;
+	margin-bottom: 1em;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+	min-width: 8em;
+	color: var(--color-gray-90);
+}
+.postlist-link {
+	/* font-size: 1.1875em; 19px /16 */
+	/* font-weight: 700; */
+	/* flex-basis: calc(100% - 1.5rem); */
+	/* text-underline-position: from-font; */
+	/* text-underline-offset: 0; */
+	/* text-decoration-thickness: 1px; */
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+@media (max-width: 640px) {
+	.postlist-item {
+		flex-direction: column;
+	}
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: 0.1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}

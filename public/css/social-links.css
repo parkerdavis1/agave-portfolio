@@ -1,0 +1,26 @@
+.social-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.social-ul {
+    padding-left: 10rem;
+    display: flex;
+}
+
+.social-li {
+    display: inline;
+    margin-inline-start: 0.75em;
+}
+
+.social-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-a svg {
+    width: 24px;
+    height: 24px;
+}
