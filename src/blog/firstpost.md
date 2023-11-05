@@ -1,26 +1,13 @@
 ---
-title: This is my first post.
-description: This is a post on My Blog about agile frameworks.
-date: 2018-05-01
+title: My plans for this blog
+description: I lay out my plans for this blog
+date: 2023-11-04
 tags:
-  - another tag
+  - 
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+## Beginings
+I decided a couple years ago I would teach myself to code. I have learned a ton and have made some [cool things](/#projects). Some people closest to me probably don't know that I am actively trying to transition into a career in software engineering. Or what I'm working on before I feel it is completely done. This is temp text!
 
-## Section Header
-
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-
-```diff-js
- // this is a command
- function myCommand() {
-+  let counter = 0;
--  let counter = 1;
-   counter++;
- }
-
- // Test with a line break above this line.
- console.log('Test');
-```
+## Jobs
+I am about to start interviewing for many different jobs. One of the things I would like to do with this blog is share what I am learning on a more micro level. Tech interview questions like what is an HTML Doctype? My approach has been to learn as quickly as possible what I need to know in order to make something that works. If you asked me to explain what I am doing, I'd probably have a hard time and jumble up some of the jargon, since I rarely actually talk about this stuff. This blog is meant to change that. Share what I am learning, distill it into interesting chunks, solidify my own understanding, and give back to the developer community which is so open. This is a rough rough rough draft of a post.

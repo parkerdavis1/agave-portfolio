@@ -3,25 +3,31 @@ layout: layouts/base.njk
 ---
 
 {# Only include the syntax highlighter CSS on blog posts #}
-{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
-{%- css %}{% include "node_modules/dracula-prism/dist/css/dracula-prism.css" %}{% endcss %}
-{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
-    <article class="flow"> <h1>{{ title }}</h1>
-    <ul class="post-metadata">
-        <li>
-            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-        </li>
-        {%- for tag in tags | filterTagList %}
-            {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+{%- css %}
+{% include "node_modules/dracula-prism/dist/css/dracula-prism.css" %}
+{% endcss %}
+{%- css %}
+{% include "public/css/prism-diff.css" %}
+{%- endcss %}
+<main id="skip" class="flow">
+    <article class="flow">
+        <h1>{{ title }}</h1>
+        <ul class="post-metadata">
             <li>
-                <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
-                {%- if not loop.last %},
-                {% endif %}
+                <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
             </li>
-        {%- endfor %}
-    </ul>
-    {{ content | safe }}
-</article>
+            {%- for tag in tags | filterTagList %}
+                {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                <li>
+                    <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+                    {%- if not loop.last %},
+                    {% endif %}
+                </li>
+            {%- endfor %}
+        </ul>
+        {{ content | safe }}
+    </article>
+</main>
 {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}
     {%- set nextPost = collections.posts | getNextCollectionItem %}

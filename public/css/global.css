@@ -7,7 +7,6 @@
 		Courier, monospace;
 }
 
-/* Theme colors */
 :root {
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #c0c0c0;
@@ -19,13 +18,10 @@
 	--text-color-link: #082840;
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050f;
-	/* --text-color-link: rgb(152, 20, 40);
-	--text-color-link-active: rgb(152, 20, 40);
-	--text-color-link-visited: rgb(152, 20, 40); */
 	
 	--syntax-tab-size: 2;
 
-	/* fluid  */
+	/* Fluid  */
 	--step--2: clamp(0.7813rem, 0.793rem + -0.0152vw, 0.79rem);
 	--step--1: clamp(0.8888rem, 0.8718rem + 0.0848vw, 0.9375rem);
 	--step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
@@ -36,13 +32,18 @@
 	--step-5: clamp(1.8019rem, 1.4549rem + 1.7348vw, 2.7994rem);
 
 	/* Major Second  */
-	--step--2: 0.889rem;
+	--step--1: 0.889rem;
 	--step-0: 1rem;
 	--step-1: 1.125rem;
 	--step-2: 1.266rem;
 	--step-3: 1.424rem;
 	--step-4: 1.602rem;
 	--step-5: 1.802rem;
+
+	/* Icon Size */
+	--icon-width: clamp(3rem, 12vw, 5rem);
+	--icon-width-neg: calc((var(--icon-width) * -1));
+	--icon-height: 80px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,7 +80,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	max-width: 40rem;
 }
 /* flow  */
 .flow > * + * {
@@ -156,6 +157,7 @@ a[href]:active {
 
 main {
 	padding-inline: 1rem;
+	padding-block-end: 1rem;
 }
 main :first-child {
 	margin-top: 0;
@@ -205,59 +207,6 @@ pre:not([class*="language-"]) {
 }
 code {
 	word-break: break-all;
-}
-
-/* Header */
-header {
-	position: relative;
-	left: 5rem;
-	display: flex;
-	flex-direction: column;
-	gap: 0.5em;
-	padding: 1em;
-}
-.header-icon {
-	position: absolute;
-	left: -5rem;
-	height: 5rem;
-	width: 5rem;
-}
-
-.home-link {
-	font-size: 1.5em;
-	font-weight: 700;
-	margin-right: 2em;
-}
-.home-link:hover {
-	text-decoration: none;
-}
-.home-link:link:not(:hover) {
-	text-decoration: none;
-}
-
-/* Nav */
-.nav {
-	display: flex;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.nav-item {
-	display: inline-block;
-	padding-inline: 1em;
-	border-right: 1px dotted var(--color-gray-50);
-}
-.nav-item:first-of-type {
-	padding-inline-start: 0;
-}
-.nav-item:last-of-type {
-	border: none;
-}
-.nav-item a[href]:not(:hover) {
-	text-decoration: none;
-}
-.nav a[href][aria-current="page"] {
-	/* text-decoration: underline; */
 }
 
 /* Posts list */
