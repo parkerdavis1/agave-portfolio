@@ -43,6 +43,7 @@
 	},
 	"dependencies": {
 		"@11ty/eleventy-plugin-webc": "^0.11.1",
-		"dracula-prism": "^2.1.13"
+		"dracula-prism": "^2.1.13",
+		"eleventy-plugin-nesting-toc": "^1.3.0"
 	}
 }

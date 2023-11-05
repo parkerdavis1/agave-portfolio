@@ -10,6 +10,7 @@ const {
 	EleventyRenderPlugin,
 } = require("@11ty/eleventy");
 const pluginWebc = require('@11ty/eleventy-plugin-webc');
+const pluginTOC = require('eleventy-plugin-nesting-toc');
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
@@ -36,6 +37,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginWebc, {
 		components: 'src/_includes/components/*.webc'
 	});
+	eleventyConfig.addPlugin(pluginTOC);
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginRss);
@@ -95,7 +97,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.amendLibrary("md", (mdLib) => {
 		mdLib.use(markdownItAnchor, {
 			permalink: markdownItAnchor.permalink.ariaHidden({
-				placement: "after",
+				placement: "before",
 				class: "header-anchor",
 				symbol: "#",
 				ariaHidden: false,

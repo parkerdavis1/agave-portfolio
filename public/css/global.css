@@ -39,11 +39,6 @@
 	--step-3: 1.424rem;
 	--step-4: 1.602rem;
 	--step-5: 1.802rem;
-
-	/* Icon Size */
-	--icon-width: clamp(3rem, 12vw, 5rem);
-	--icon-width-neg: calc((var(--icon-width) * -1));
-	--icon-height: 80px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -274,11 +269,16 @@ code {
 }
 
 /* Direct Links / Markdown Headers */
+article {
+	position: relative;
+}
 .header-anchor {
 	text-decoration: none;
 	font-style: normal;
 	font-size: 1em;
-	margin-left: 0.1em;
+	position: absolute;
+	left: -1.1em;
+	padding-inline: 0.25em;
 }
 a[href].header-anchor,
 a[href].header-anchor:visited {
@@ -286,7 +286,7 @@ a[href].header-anchor:visited {
 }
 a[href].header-anchor:focus,
 a[href].header-anchor:hover {
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 a[href].header-anchor:focus,
 :hover > a[href].header-anchor {

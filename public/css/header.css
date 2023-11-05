@@ -1,3 +1,9 @@
+:root {
+	/* Icon Size */
+	--icon-width: clamp(3rem, 12vw, 5rem);
+	--icon-width-neg: calc((var(--icon-width) * -1));
+	--icon-height: 80px;
+}
 /* Header */
 header {
 	position: relative;
@@ -11,8 +17,9 @@ header {
 	position: absolute;
 	left: var(--icon-width-neg);
 	bottom: 1.5em;
-	width: var(--icon-width);
+	width: calc(var(--icon-width) + 0.5rem);
 	height: var(--icon-height);
+	padding-inline-start: 0.5rem;
 }
 
 .home-link {
