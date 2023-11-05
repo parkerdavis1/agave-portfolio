@@ -1,0 +1,8 @@
+.project-nav {
+    padding-block: 1rem;
+    border-top: 1px dashed var(--color-gray-20);
+}
+
+.project-description {
+    padding-block: 1rem;
+}

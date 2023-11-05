@@ -3,10 +3,13 @@ title: My plans for this blog
 description: I lay out my plans for this blog
 date: 2023-11-04
 tags:
-  - 
+  - fun
+  - software development
+  - personal
+  - rant
 ---
 
-## Beginings
+## Beginnings
 I decided a couple years ago I would teach myself to code. I have learned a ton and have made some [cool things](/#projects). Some people closest to me probably don't know that I am actively trying to transition into a career in software engineering. Or what I'm working on before I feel it is completely done. This is temp text!
 
 ## Jobs
@@ -18,7 +21,7 @@ I am a person who writes stuff. I am a person who writes stuff. I am a person wh
 ### Second Smaller
 I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. I am a person who writes stuff. 
 
-#### H 4 is here
+#### H4 is here, long title very long! Very very long!
 #### Another h4
 ##### h5
 ###### h6

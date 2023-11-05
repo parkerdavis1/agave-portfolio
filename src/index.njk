@@ -1,8 +1,5 @@
 ---
 layout: layouts/home.njk
-eleventyNavigation:
-  key: Home
-  order: 1
 numberOfLatestPostsToShow: 5
 ---
 
@@ -23,8 +20,12 @@ numberOfLatestPostsToShow: 5
 <section class="flow">
     <h2 id="projects">Projects</h2>
     <ul class="list">
-        <li>Equestrian Horse Scheduler</li>
-        <li>Rare Bird Alert!</li>
-        <li>RainCrow</li>
+        {% for project in collections.projects %}
+            <li>
+                <a href="{{project.url}}">
+                    {{ project.data.title}}
+                </a>
+            </li>
+        {% endfor %}
     </ul>
 </section>

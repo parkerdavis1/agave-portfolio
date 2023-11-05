@@ -32,6 +32,8 @@
 	--step-5: clamp(1.8019rem, 1.4549rem + 1.7348vw, 2.7994rem);
 
 	/* Major Second  */
+	--step--3: 0.702rem;
+	--step--2: 0.79rem;
 	--step--1: 0.889rem;
 	--step-0: 1rem;
 	--step-1: 1.125rem;
@@ -226,14 +228,6 @@ code {
 	min-width: 8em;
 	color: var(--color-gray-90);
 }
-.postlist-link {
-	/* font-size: 1.1875em; 19px /16 */
-	/* font-weight: 700; */
-	/* flex-basis: calc(100% - 1.5rem); */
-	/* text-underline-position: from-font; */
-	/* text-underline-offset: 0; */
-	/* text-decoration-thickness: 1px; */
-}
 .postlist-item-active .postlist-link {
 	font-weight: bold;
 }
@@ -248,8 +242,8 @@ code {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	text-transform: capitalize;
 	font-style: italic;
+	font-size: var(--step--1)
 }
 .postlist-item > .post-tag {
 	align-self: center;
@@ -264,8 +258,17 @@ code {
 	padding: 0;
 	margin: 0;
 }
-.post-metadata time {
-	margin-right: 1em;
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25em;
+	margin-block-start: 0.75em;
+	align-items: center;
+}
+.tags-icon {
+	height: 1rem;
+	width: 1rem;
 }
 
 /* Direct Links / Markdown Headers */

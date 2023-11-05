@@ -8,29 +8,36 @@ layout: layouts/base.njk
 {% include "public/css/toc.css" %}
 {% endcss %}
 <div class="toc-container">
+    {% if content | toc %}
     <aside>
         <span class="toc-heading">Table of Contents</span>
         {{ content | toc | safe }}
     </aside>
+    {% endif %}
     <main id="skip" class="flow">
         <article class="flow">
             <h1>{{ title }}</h1>
-            <ul class="post-metadata">
-                <li>
-                    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-                </li>
-                {%- for tag in tags | filterTagList %}
-                    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-                    <li>
-                        <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
-                        {%- if not loop.last %},
-                        {% endif %}
-                    </li>
-                {%- endfor %}
-            </ul>
+            <span class="post-metadata">
+                <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+                <span>/ {{ content | emojiReadTime }}</span>
+            </span>
+            {% set tags = tags | filterTagList %}
+            {% if tags.length > 0 %}
+                <div class="tags">
+                <svg class="tags-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m21.41 11.58l-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5A1.5 1.5 0 0 1 6.5 5Z"/></svg>
+                    {%- for tag in tags | filterTagList %}
+                        {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                        <span>
+                            <a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a>
+                            {%- if not loop.last %},
+                            {% endif %}
+                        </span>
+                    {%- endfor %}
+                </div>
+            {% endif %}
+            
             {{ content | safe }}
         </article>
-    </main>
     {%- if collections.posts %}
         {%- set previousPost = collections.posts | getPreviousCollectionItem %}
         {%- set nextPost = collections.posts | getNextCollectionItem %}
@@ -49,4 +56,5 @@ layout: layouts/base.njk
             </ul>
         {%- endif %}
     {%- endif %}
+    </main>
 </div>
