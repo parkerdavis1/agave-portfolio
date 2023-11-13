@@ -1,0 +1,19 @@
+{% from "components/tech-list.njk" import techlist %}
+<ul class="projects-ul">
+    {% for project in collections.projects %}
+        <div class="projects-li">
+            <a class="projects-a" href="{{ project.url }}">
+                {{ project.data.title }}
+            </a>
+            <div class="tags-container">
+                {% if project.data.techtags %}
+                    {{ techlist(project.data.techtags) }}
+                {% endif %}
+            </div>
+            <p class="project-summary">{{ project.data.summary }}</p>
+        </div>
+    {% endfor %}
+</ul>
+{% css %}
+{% include "public/css/projects-list.css" %}
+{% endcss %}

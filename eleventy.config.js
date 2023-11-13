@@ -9,9 +9,10 @@ const {
 	EleventyHtmlBasePlugin,
 	EleventyRenderPlugin,
 } = require("@11ty/eleventy");
-const pluginWebc = require('@11ty/eleventy-plugin-webc');
-const pluginTOC = require('eleventy-plugin-nesting-toc');
-const emojiReadTime = require('@11tyrocks/eleventy-plugin-emoji-readtime');
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
+const pluginTOC = require("eleventy-plugin-nesting-toc");
+const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
+const lightningCss = require("@11tyrocks/eleventy-plugin-lightningcss");
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
@@ -36,13 +37,14 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginImages);
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
 	eleventyConfig.addPlugin(pluginWebc, {
-		components: 'src/_includes/components/*.webc'
+		components: "src/_includes/components/*.webc",
 	});
 	eleventyConfig.addPlugin(pluginTOC);
 	eleventyConfig.addPlugin(emojiReadTime, {
 		showEmoji: false,
-		label: 'min read'
-	})
+		label: "min read",
+	});
+	eleventyConfig.addPlugin(lightningCss);
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginRss);
@@ -133,9 +135,9 @@ module.exports = function (eleventyConfig) {
 
 		// These are all optional:
 		dir: {
-			input: "src", // default: "."
-			includes: "_includes", // default: "_includes"
-			data: "_data", // default: "_data"
+			input: "content", // default: "."
+			includes: "../_includes", // default: "_includes"
+			data: "../_data", // default: "_data"
 			output: "_site",
 		},
 

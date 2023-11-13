@@ -19,13 +19,5 @@ numberOfLatestPostsToShow: 5
 
 <section class="flow">
     <h2 id="projects">Projects</h2>
-    <ul class="list">
-        {% for project in collections.projects %}
-            <li>
-                <a href="{{project.url}}">
-                    {{ project.data.title}}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+    {% include "components/projects-list.njk" %}
 </section>

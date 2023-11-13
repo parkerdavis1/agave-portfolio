@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+---
+
+{% css %}
+{% include "node_modules/dracula-prism/dist/css/dracula-prism.css" %}
+{% include "public/css/prism-diff.css" %}
+{% include "public/css/toc.css" %}
+{% include 'public/css/project.css' %}
+{% include "public/css/projects-list.css" %}
+
+{% endcss %}
+<div class="toc-container">
+    {% if content | toc %}
+        <aside>
+            <span class="toc-heading">Table of Contents</span>
+            {{ content | toc | safe }}
+        </aside>
+    {% endif %}
+    <main id="skip" class="flow">
+        <article class="flow">
+            <h1>{{ title }}</h1>
+            <div class="tags-container tags-container-post">
+                {% include "icons/tags.svg" %}
+                {% from "components/tech-list.njk" import techlist %}
+                {{ techlist(techtags) }}
+            </div>
+            {{ content | safe }}
+        </article>
+        {# {%- if collections.projects %}
+                    {%- set previousPost = collections.projects | getPreviousCollectionItem %}
+                    {%- set nextPost = collections.projects | getNextCollectionItem %}
+                    {%- if nextPost or previousPost %}
+                        <ul class="links-nextprev">
+                            {%- if previousPost %}
+                                <li>Previous:
+                                    <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+                                </li>
+                            {% endif %}
+                            {%- if nextPost %}
+                                <li>Next:
+                                    <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    {%- endif %}
+                {%- endif %} #}
+        <nav class="project-nav">
+            <a href="/projects/">Back to Projects</a>
+        </nav>
+    </main>
+</div>

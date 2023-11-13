@@ -1,0 +1,6 @@
+{% macro techlist(techlist) %}
+    {% set colors = ['color1', 'color2', 'color3', 'color4'] %}
+    {% for techtag in techlist %}
+        <span class="tech-tag-li {{ colors[loop.index0%colors.length] }}">{{ techtag }}</span>
+    {% endfor %}
+{% endmacro %}
