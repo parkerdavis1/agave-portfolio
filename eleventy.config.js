@@ -103,12 +103,18 @@ module.exports = function (eleventyConfig) {
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", (mdLib) => {
 		mdLib.use(markdownItAnchor, {
-			permalink: markdownItAnchor.permalink.ariaHidden({
-				placement: "before",
-				class: "header-anchor",
-				symbol: "#",
-				ariaHidden: false,
-			}),
+			// permalink: markdownItAnchor.permalink.ariaHidden({
+			// 	placement: "before",
+			// 	class: "header-anchor",
+			// 	symbol: "#",
+			// 	ariaHidden: true,
+			// }),
+			// permalink: markdownItAnchor.permalink.linkAfterHeader({
+			// 	style: 'visually-hidden',
+			// 	assistiveText: title => `Permalink to “${title}”`,
+			// 	visuallyHiddenClass: 'visually-hidden',
+			// }),
+			permalink: markdownItAnchor.permalink.headerLink(),
 			level: [1, 2, 3, 4],
 			slugify: eleventyConfig.getFilter("slugify"),
 		});

@@ -20,8 +20,11 @@ aside {
 }
 
 .toc-heading {
-    /* text-decoration: underline; */
     font-weight: bold;
+}
+
+.toc ol ol {
+    margin-inline-start: 1em;
 }
 
 .toc li {
