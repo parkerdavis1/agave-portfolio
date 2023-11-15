@@ -186,10 +186,10 @@ article ul {
 	padding-left: 1em;
 }
 article li {
-	list-style:circle;
+	list-style: disc;
 }
 article li li {
-	list-style-type: '- ';
+	list-style-type: circle;
 }
 main {
 	padding-inline: 1rem;
