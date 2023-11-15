@@ -21,11 +21,11 @@ githubUrl: https://github.com/opportunity-hack/evs
 {% image "./EVS-light.png", "EVS screenshot" %}
 
 ## Overview
-I collaborated closely with other developers to create an application that allows [The Barn](https://www.thebarnaz.com/) to schedule volunteers for their horse lessons and horse therapy. It was done in collaboration with [Opportunity Hack](https://www.ohack.org/), a local organization that pairs developers with non-profits who need custom software to accomplish their goals.
+I collaborated closely with other developers to create an application that allows [The Barn](https://www.thebarnaz.com/) to schedule volunteers for their horse lessons and  therapy. It was done in collaboration with [Opportunity Hack](https://www.ohack.org/), a local organization that pairs developers with non-profits who need custom software to accomplish their goals.
 
 
 ## Contributions
-My github pull requests for this project can be found [here](https://github.com/opportunity-hack/evs/pulls?q=is%3Apr+author%3Aparkerdavis1+). 
+My github pull requests for this project can be found [here](https://github.com/opportunity-hack/evs/pulls?q=is%3Apr+author%3Aparkerdavis1+).
 
 ### Summary
 - UI/UX optimizations

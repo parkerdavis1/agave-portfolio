@@ -13,6 +13,7 @@ const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const pluginTOC = require("eleventy-plugin-nesting-toc");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 const lightningCss = require("@11tyrocks/eleventy-plugin-lightningcss");
+const markdownItAttrs = require('markdown-it-attrs');
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
@@ -59,7 +60,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
 		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(
-			format || "dd LLLL yyyy"
+			format || "DDD"
 		);
 	});
 
@@ -102,18 +103,8 @@ module.exports = function (eleventyConfig) {
 
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", (mdLib) => {
+		mdLib.use(markdownItAttrs),
 		mdLib.use(markdownItAnchor, {
-			// permalink: markdownItAnchor.permalink.ariaHidden({
-			// 	placement: "before",
-			// 	class: "header-anchor",
-			// 	symbol: "#",
-			// 	ariaHidden: true,
-			// }),
-			// permalink: markdownItAnchor.permalink.linkAfterHeader({
-			// 	style: 'visually-hidden',
-			// 	assistiveText: title => `Permalink to “${title}”`,
-			// 	visuallyHiddenClass: 'visually-hidden',
-			// }),
 			permalink: markdownItAnchor.permalink.headerLink(),
 			level: [1, 2, 3, 4],
 			slugify: eleventyConfig.getFilter("slugify"),

@@ -18,7 +18,7 @@ layout: layouts/base.njk
         <article class="flow">
             <h1>{{ title }}</h1>
             <span class="post-metadata">
-                <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate("DDD") }}</time>
+                <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
                 <span>/ {{ content | emojiReadTime }}</span>
             </span>
             {% set tags = tags | filterTagList %}
