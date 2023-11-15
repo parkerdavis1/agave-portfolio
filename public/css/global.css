@@ -182,7 +182,15 @@ article a:hover,
 article a:active {
 	color: var(--text-color-link);
 }
-
+article ul {
+	padding-left: 1em;
+}
+article li {
+	list-style:circle;
+}
+article li li {
+	list-style-type: '- ';
+}
 main {
 	padding-inline: 1rem;
 	padding-block-end: 1rem;

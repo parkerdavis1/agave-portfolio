@@ -6,25 +6,25 @@ updatedOn: 2023-11-15
 tags:
   - updates
 ---
-## Hello
+## Hello!
 
-Welcome to my blog! My personal/developer blog. You may know that I have a [bird sound blog](https://birdsmakesound.com/) that explores the world of birds, sound, and recording. While it is written for a more general audience, this blog will be for other developers, or really, myself. The topics will tend toward the niche and developer-y. Of course I hope it is of interest to anyone but a certain baseline of computery knowledge will be assumed.
+Welcome to my blog. My personal/developer blog. You may know that I have a [bird sound blog](https://birdsmakesound.com/) that explores the world of birds, sound, and recording. While it is written for a more general audience, this blog will be for other developers, or really, myself. The topics will tend toward the niche and developer-y. Of course I hope it is of interest to anyone but a certain baseline of familiarity with coding will be assumed.
 
 ## Why?
 
-One of the things I admire most about the online developer community is the commitment to freely sharing knowledge. I can't tell you how many times I've had a question about about something, [ecosia'd](https://www.ecosia.org) it, and found someone's blog post explaining exactly what I was looking for. On the occasions that I figure something out for myself, I would like to have somewhere to share my findings with others (and remind my future self).
+One of the things I admire most about the online developer community is the commitment to freely sharing knowledge. I can't tell you how many times I've had a question about about something, [ecosia'd](https://www.ecosia.org) it, and found someone's blog post explaining exactly what I was looking for. When I figure something out for myself I would like to have somewhere to share my findings with others (and remind my future self).
 
 Also, I tend to work in private. Only when I finish something do I start to consider telling other people about it. Some of my friends and family probably don't even know that I am actively seeking employment as a software engineer. This is a problem, if only because when people don't know I'm looking for work, they won't know to connect me with people who *have* work. This blog is an attempt to counter my private tendencies and take more of a ['Learn In Public'](https://www.swyx.io/learn-in-public) approach.
 
-Up until now I've been focused on walking the walk, now I'm also going to talk the talk.
+Up until now I've been focused on walking the walk, now I'm also going to *talk the talk*.
 
 ## Topics
 
-Plans for upcoming posts come in the following flavors:
+Some categories for upcoming posts:
 
 ### Today I Learned (TIL)
 
-No post too short or topic too small. Learning is constant and I'd like to document some of the little "Ah-ha"s as I encounter them.
+No post too short or topic too small. Learning is constant and I'd like to document some of the little *Ah-has* as I encounter them.
 
 ### Project Updates
 

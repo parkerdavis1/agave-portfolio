@@ -6,7 +6,12 @@ techtags:
     - HTML
     - CSS
     - Javascript
+githubUrl: https://github.com/parkerdavis1/raincrow-sveltekit
+liveUrl: https://raincrow.netlify.app/
 ---
+## Links
+
+{% include "components/project-links.njk" %}
 
 ## Background
 

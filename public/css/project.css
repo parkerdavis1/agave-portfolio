@@ -6,3 +6,13 @@
 .project-description {
     padding-block: 1rem;
 }
+
+.project-link-container {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5em;
+}
+
+.project-links ul {
+    padding-left: 0;
+}

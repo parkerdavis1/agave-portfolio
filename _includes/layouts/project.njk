@@ -8,7 +8,6 @@ layout: layouts/base.njk
 {% include "public/css/toc.css" %}
 {% include 'public/css/project.css' %}
 {% include "public/css/projects-list.css" %}
-
 {% endcss %}
 <div class="toc-container">
     {% if content | toc %}
@@ -25,27 +24,26 @@ layout: layouts/base.njk
                 {% from "components/tech-list.njk" import techlist %}
                 {{ techlist(techtags) }}
             </div>
-            {# <p>Project pages are under construction! Check back soon.</p> #}
             {{ content | safe }}
         </article>
         {# {%- if collections.projects %}
-                    {%- set previousPost = collections.projects | getPreviousCollectionItem %}
-                    {%- set nextPost = collections.projects | getNextCollectionItem %}
-                    {%- if nextPost or previousPost %}
-                        <ul class="links-nextprev">
-                            {%- if previousPost %}
-                                <li>Previous:
-                                    <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-                                </li>
-                            {% endif %}
-                            {%- if nextPost %}
-                                <li>Next:
-                                    <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-                                </li>
-                            {% endif %}
-                        </ul>
-                    {%- endif %}
-                {%- endif %} #}
+            {%- set previousPost = collections.projects | getPreviousCollectionItem %}
+            {%- set nextPost = collections.projects | getNextCollectionItem %}
+            {%- if nextPost or previousPost %}
+                <ul class="links-nextprev">
+                    {%- if previousPost %}
+                        <li>Previous:
+                            <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+                        </li>
+                    {% endif %}
+                    {%- if nextPost %}
+                        <li>Next:
+                            <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            {%- endif %}
+        {%- endif %} #}
         <nav class="project-nav">
             <a href="/projects/">Back to Projects</a>
         </nav>
