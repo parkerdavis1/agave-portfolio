@@ -8,7 +8,6 @@
 header {
 	display: grid;
 	grid-template-rows: auto auto;
-	height: 80px;
 	grid-template-columns: var(--icon-width) 1fr;
 	grid-template-areas:
 		"icon title"
@@ -22,6 +21,7 @@ header a[href] {
 .header-icon {
 	grid-area: icon;
 	align-self: start;
+	width: var(--icon-width);
 }
 
 .home-link {
