@@ -8,7 +8,7 @@ tags:
 ---
 ## Hello!
 
-Welcome to my blog. My personal/developer blog. You may know that I have a [bird sound blog](https://birdsmakesound.com/) that explores the world of birds, sound, and recording. While it is written for a more general audience, this blog will be for other developers, or really, myself. The topics will tend toward the niche and developer-y. Of course I hope it is of interest to anyone but a certain baseline of familiarity with coding will be assumed.
+Welcome to my blog. My personal/developer blog. You may know that I have a [bird sound blog](https://birdsmakesound.com/) that explores the world of birds, sound, and recording. While it is written for a more general audience, this blog will be for other developers, or really, myself. The topics will tend toward the niche and *developer-y*. Of course I hope it is of interest to anyone but a certain baseline of familiarity with coding will be assumed.
 
 ## Why?
 

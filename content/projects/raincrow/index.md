@@ -13,6 +13,10 @@ liveUrl: https://raincrow.netlify.app/
 
 {% include "components/project-links.njk" %}
 
+## Screenshot
+
+{% image "./raincrow-inthewild.jpg", "Raincrow being used while birding" %}
+
 ## Background
 
 [eBird](https://ebird.org/about) is a global citizen science database where users submit checklists to contibute to a shared understanding of the world's bird life.
