@@ -18,7 +18,7 @@ As a somewhat obsessive eBird user, I like to include weather observations in th
 
 To get weather data for a checklist that is already submitted to eBird, all the user has to do is input the checklist ID (or the entire URL) for a checklist and click "Get Weather". The app gathers the weather conditions for the location and duration of the checklist and displays them below the input form. The data is copied with the "Copy to Clipboard" button and can now be pasted in the comments section for a given checklist.
 
-{% image "./submitted.png", "RainCrow eBird Weather submitted screenshot" %}
+{% image "./raincrow-screen1.png", "RainCrow eBird Weather submitted screenshot" %}
 
 If the user wants to gather weather data before a checklist is submitted, they can use the "Pre-Submit" form. This removes the need to edit a checklist after submitting it. It is especially useful for shared checklists, allowing weather observations to be shared with all observers.
 

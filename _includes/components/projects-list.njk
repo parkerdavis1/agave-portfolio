@@ -5,11 +5,11 @@
             <a class="projects-a" href="{{ project.url }}">
                 {{ project.data.title }}
             </a>
-            <div class="tags-container">
+            {# <div class="tags-container">
                 {% if project.data.techtags %}
                     {{ techlist(project.data.techtags) }}
                 {% endif %}
-            </div>
+            </div> #}
             <p class="project-summary">{{ project.data.summary }}</p>
         </div>
     {% endfor %}
