@@ -1,6 +1,6 @@
 ---
 title: Rare Bird Alert!
-summary: Full stack web app extending the features and styles of the eBird Rare Bird Alert.
+description: Full stack web app extending the features and styles of the eBird Rare Bird Alert.
 techtags:
     - Svelte/Sveltekit
     - TailwindCSS

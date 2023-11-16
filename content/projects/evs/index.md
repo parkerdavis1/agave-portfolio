@@ -1,6 +1,6 @@
 ---
 title: Equestrian Volunteer Scheduler
-summary: Custom server-rendered full stack administrative web application with role-based access control for local non-profit.
+description: Custom server-rendered full stack administrative web application with role-based access control for local non-profit.
 techtags:
     - React
     - Remix

@@ -1,6 +1,6 @@
 ---
 title: RainCrow
-summary: Automatically gather weather data for eBird checklists using historical weather APIs. Used by thousands of people every week.
+description: Automatically gather weather data for eBird checklists using historical weather APIs. Used by thousands of people every week.
 techtags:
     - Svelte/Sveltekit
     - HTML
