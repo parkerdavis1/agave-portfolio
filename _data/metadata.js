@@ -6,6 +6,8 @@ module.exports = {
 	author: {
 		name: "Parker Davis",
 		email: "hello@parkerdavis.dev",
-		url: "https://parkerdavis.dev/about/"
+		url: "https://parkerdavis.dev/about/",
+		twitter: "park_d"
 	},
+	socialImg: "https://parkerdavis.dev/android-chrome-192x192.png"
 }
