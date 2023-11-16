@@ -189,7 +189,7 @@ article li {
 	list-style: disc;
 }
 article li li {
-	list-style-type: circle;
+	list-style-type: "- ";
 }
 main {
 	padding-inline: 1rem;

@@ -28,17 +28,18 @@ I collaborated closely with other developers to create an application that allow
 My github pull requests for this project can be found [here](https://github.com/opportunity-hack/evs/pulls?q=is%3Apr+author%3Aparkerdavis1+).
 
 ### Summary
+
 - UI/UX optimizations
-- Updated various forms with custom validation logic and updated corresponding database schemas
-- Horse Cooldown Scheduling
-    - Allow scheduling of rest time for horses
-    - [Remove horse from events during cooldown period and alerts admin user of these changes](https://github.com/opportunity-hack/evs/pull/43)
-    - [Prevent horse from being scheduled to new events during cooldown period](https://github.com/opportunity-hack/evs/pull/47)
-- [Allow the creation of events on multiple dates](https://github.com/opportunity-hack/evs/pull/54)
+- Updated forms with custom validation logic and corresponding database schemas
+- Added feature to allow horse cooldown scheduling
+    - Allows scheduling of rest time for horses
+    - [Removes horse from events during cooldown period and alerts user of these changes](https://github.com/opportunity-hack/evs/pull/43)
+    - [Prevents horse from being scheduled to new events during cooldown period](https://github.com/opportunity-hack/evs/pull/47)
+- [Added feature to allow the creation of events on multiple dates](https://github.com/opportunity-hack/evs/pull/54)
 
 ## Recognition
 
-My contributions and accomplishments were officially recognized by Opportunity Hack and include:
+My contributions and accomplishments were officially recognized by Opportunity Hack:
 
 - Standups Completed
 - Code Reliability
