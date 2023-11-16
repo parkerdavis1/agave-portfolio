@@ -9,5 +9,5 @@ module.exports = {
 		url: "https://parkerdavis.dev/about/",
 		twitter: "park_d"
 	},
-	socialImg: "https://parkerdavis.dev/android-chrome-192x192.png"
+	socialImg: ""
 }

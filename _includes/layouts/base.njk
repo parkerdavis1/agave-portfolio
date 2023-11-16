@@ -9,6 +9,7 @@
         rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
         <meta name="generator" content="{{ eleventy.generator }}"> 
         <meta name="description" content="{{ description or metadata.description }}">
+        {% if metadata.socialImg %}
         <!-- Open Graph -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{metadata.url}}">
@@ -24,6 +25,7 @@
         <meta name="twitter:title" content="{{title or metadata.title}}">
         <meta name="twitter:description" content="{{description or metadata.description}}">
         <meta name="twitter:image" content="{{metadata.socialImg}}">
+        {% endif %}
 
         {%- css %}
             {% include "public/css/global.css" %}
