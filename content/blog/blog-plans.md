@@ -1,7 +1,7 @@
 ---
 title: My plans for this blog
 description: I lay out my plans for this blog
-date: 2023-11-15
+date: 2023-11-16
 updatedOn: 2023-11-16
 tags:
   - updates
@@ -32,7 +32,7 @@ I always have several projects going at any given time. Expect updates about any
 
 ### "Trivia" questions
 
-As I mentioned, I'm looking for a job. I'm going to have to go through tech interviews to get said job. One component of tech interviews is answering trivia-style questions about the languages and technologies you use, such as "What is the purpose of the &lt;!DOCTYPE html&gt; tag in HTML?" This is well-trodden territory but that's not going to stop me from writing about it! *Plus, the answer is more interesting than you might think.*
+As I mentioned, I'm looking for a job. I'm going to have to go through tech interviews to get said job. One component of tech interviews is answering trivia-style questions about the languages and technologies you use, such as "What is the purpose of the &lt;!DOCTYPE html&gt; tag in HTML?" This is well-trodden territory but that's not going to stop me from writing about it! Plus, the answer is more interesting than you might think.
 
 ### New technologies, new approaches
 
