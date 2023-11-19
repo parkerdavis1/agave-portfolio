@@ -13,7 +13,7 @@ const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const pluginTOC = require("eleventy-plugin-nesting-toc");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 const lightningCss = require("@11tyrocks/eleventy-plugin-lightningcss");
-const markdownItAttrs = require('markdown-it-attrs');
+const markdownItAttrs = require("markdown-it-attrs");
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
@@ -23,8 +23,6 @@ module.exports = function (eleventyConfig) {
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
 		"./public/": "/",
-		"./node_modules/dracula-prism/dist/dracula-prism.css":
-			"/css/dracula-prism.css",
 	});
 
 	// Run Eleventy when these files change:
@@ -101,14 +99,18 @@ module.exports = function (eleventyConfig) {
 		);
 	});
 
+	eleventyConfig.addFilter("featured", (collection) => {
+		return collection.filter((x) => x.data.featured);
+	});
+
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", (mdLib) => {
 		mdLib.use(markdownItAttrs),
-		mdLib.use(markdownItAnchor, {
-			permalink: markdownItAnchor.permalink.headerLink(),
-			level: [1, 2, 3, 4],
-			slugify: eleventyConfig.getFilter("slugify"),
-		});
+			mdLib.use(markdownItAnchor, {
+				permalink: markdownItAnchor.permalink.headerLink(),
+				level: [1, 2, 3, 4],
+				slugify: eleventyConfig.getFilter("slugify"),
+			});
 	});
 
 	// Features to make your build faster (when you need them)

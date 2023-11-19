@@ -8,16 +8,30 @@ numberOfLatestPostsToShow: 5
     <p>
         I'm an Arizona-based software engineer, birder, and musician.
     </p>
-    <div class="social-container"><span>Find me on: </span>{% include "components/social-links.njk" %}</div>
+    <div class="social-container">
+        <span>Find me on:
+        </span>
+        {% include "components/social-links.njk" %}</div>
 </section>
-
 <section class="flow">
     <h2>Recent Posts</h2>
     {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
     {% include "components/postslist.njk" %}
 </section>
-
 <section class="flow">
     <h2 id="projects">Featured Projects</h2>
-    {% include "components/projects-list.njk" %}
+    {% css %}
+    {% include "public/css/projects-list.css" %}
+    {% endcss %}
+    <ul class="projects-ul">
+        {% for project in collections.projects | featured %}
+            <li class="projects-li">
+                <a class="projects-a" href="{{ project.url }}">
+                    {{ project.data.title }}
+                </a>
+                <p class="project-description">{{ project.data.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <p>See more projects <a href="/projects">here</a>.</p>
 </section>

@@ -1,15 +1,15 @@
-{# {% from "components/tech-list.njk" import techlist %} #}
+{% from "components/tech-list.njk" import techlist %}
 <ul class="projects-ul">
     {% for project in collections.projects %}
         <li class="projects-li">
             <a class="projects-a" href="{{ project.url }}">
                 {{ project.data.title }}
             </a>
-            {# <div class="tags-container">
+            <div class="tags-container">
                 {% if project.data.techtags %}
                     {{ techlist(project.data.techtags) }}
                 {% endif %}
-            </div> #}
+            </div>
             <p class="project-description">{{ project.data.description }}</p>
         </li>
     {% endfor %}

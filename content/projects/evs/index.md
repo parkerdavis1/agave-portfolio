@@ -11,7 +11,11 @@ techtags:
     - TailwindCSS
     - Playwright
     - Zod
+    - HTML
+    - CSS
+    - Javascript
 githubUrl: https://github.com/opportunity-hack/evs
+featured: true
 ---
 ## Links
 {% include "components/project-links.njk" %}
