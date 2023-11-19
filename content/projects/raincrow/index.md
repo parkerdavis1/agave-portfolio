@@ -9,6 +9,7 @@ techtags:
 githubUrl: https://github.com/parkerdavis1/raincrow-sveltekit
 liveUrl: https://raincrow.netlify.app/
 featured: true
+date: 2023-11-16
 ---
 ## Links
 

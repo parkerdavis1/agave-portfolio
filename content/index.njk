@@ -33,5 +33,5 @@ numberOfLatestPostsToShow: 5
             </li>
         {% endfor %}
     </ul>
-    <p>See more projects <a href="/projects">here</a>.</p>
+    <p>See {{collections.projects | length - collections.projects | featured | length}} more projects <a href="/projects">here</a>.</p>
 </section>

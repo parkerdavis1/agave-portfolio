@@ -16,6 +16,7 @@ techtags:
     - Javascript
 githubUrl: https://github.com/opportunity-hack/evs
 featured: true
+date: 2023-11-16
 ---
 ## Links
 {% include "components/project-links.njk" %}

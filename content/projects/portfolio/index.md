@@ -10,16 +10,17 @@ techtags:
   - Javascript
 githubUrl: https://github.com/parkerdavis1/agave-portfolio
 liveUrl: https://parkerdavis.dev/
-featured: false
-draft: true
 v1: https://v1.parkerdavis.dev
+featured: false
+draft: false
+date: 2023-11-19
 ---
 
 ## Links
 
 {% include "components/project-links.njk" %}
 
-I rebuilt this portfolio primarily to add a blog. I thought I'd use [Astro](astro.build) this time and was digging Chris Williams' [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus) theme – however, I did not love the workflow for customizing the [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin) plugin. I definitely could have worked around it but I decided to give Eleventy another go. I like Astro and would like to use it more but Eleventy for static sites just makes sense and helps me stay rooted in the fundamental web technologies. If I want to use the View Transitions API (which I do!) I'll have to add the code myself – sounds like a great learning experience!
+I rebuilt this portfolio primarily to add a blog. I thought I'd use [Astro](astro.build) this time and was digging Chris Williams' [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus) theme – however, I did not love the [Tailwind Typography plugin](https://tailwindcss.com/docs/typography-plugin) customization workflow. I definitely could have worked around it but I decided to give Eleventy another go. Eleventy for static sites helps me stay rooted in the fundamental web technologies. For example, if I want to use the View Transitions API (which I do!) I'll have to add the code myself – sounds like a great learning experience!
 
 ## Starter and Plugins
 
