@@ -9,5 +9,5 @@ module.exports = {
 		url: "https://parkerdavis.dev/about/",
 		twitter: "park_d"
 	},
-	socialImg: ""
+	socialImg: 'https://parkerdavis.dev/social.png'
 }
