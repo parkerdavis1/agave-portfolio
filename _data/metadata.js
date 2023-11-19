@@ -1,6 +1,6 @@
 module.exports = {
 	title: "Parker Davis",
-	url: "https://parkerdavis.dev/",
+	url: "https://parkerdavis.dev",
 	language: "EN-US",
 	description: "Arizona-based developer blog and portfolio.",
 	author: {

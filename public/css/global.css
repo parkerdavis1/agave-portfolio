@@ -19,6 +19,8 @@
 	
 	--syntax-tab-size: 2;
 
+	--body-width: 40rem;
+
 	/* Fluid  */
 	--step--2: clamp(0.7813rem, 0.793rem + -0.0152vw, 0.79rem);
 	--step--1: clamp(0.8888rem, 0.8718rem + 0.0848vw, 0.9375rem);
@@ -109,7 +111,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40rem;
+	max-width: var(--body-width);
 }
 /* flow  */
 .flow > * + * {
@@ -191,9 +193,15 @@ article li {
 article li li {
 	list-style-type: "- ";
 }
+article pre {
+	font-size: var(--step--2);
+
+}
 main {
 	padding-inline: 1rem;
 	padding-block-end: 1rem;
+	flex-basis: var(--body-width);
+	max-width: 100%;
 }
 main :first-child {
 	margin-top: 0;
