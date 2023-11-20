@@ -14,6 +14,7 @@ const pluginTOC = require("eleventy-plugin-nesting-toc");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 const lightningCss = require("@11tyrocks/eleventy-plugin-lightningcss");
 const markdownItAttrs = require("markdown-it-attrs");
+const pluginCodeClipboard = require("eleventy-plugin-code-clipboard");
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
@@ -44,6 +45,7 @@ module.exports = function (eleventyConfig) {
 		label: "min read",
 	});
 	eleventyConfig.addPlugin(lightningCss);
+	eleventyConfig.addPlugin(pluginCodeClipboard);
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginRss);
@@ -105,12 +107,13 @@ module.exports = function (eleventyConfig) {
 
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", (mdLib) => {
-		mdLib.use(markdownItAttrs),
-			mdLib.use(markdownItAnchor, {
-				permalink: markdownItAnchor.permalink.headerLink(),
-				level: [1, 2, 3, 4],
-				slugify: eleventyConfig.getFilter("slugify"),
-			});
+		mdLib.use(markdownItAttrs);
+		mdLib.use(markdownItAnchor, {
+			permalink: markdownItAnchor.permalink.headerLink(),
+			level: [1, 2, 3, 4],
+			slugify: eleventyConfig.getFilter("slugify"),
+		});
+		mdLib.use(pluginCodeClipboard.markdownItCopyButton);
 	});
 
 	// Features to make your build faster (when you need them)
