@@ -30,10 +30,10 @@ javascript:{{ebirdBookmarklet | safe}}
 
 1. Create a random bookmark (this blog post for instance)
 2. Open your bookmark manager
-3. Edit the bookmark you just created, rename it to whatever you want (maybe "eBird Compress"), and replace the previous URL with the code above
+3. Edit the bookmark you just created, rename it to whatever you want (maybe "eBird Compress"), and replace the URL with the code above
 4. Save your new bookmark
 
-Now when you go to any [eBird alert page](https://ebird.org/alert/summary?sid=SN36093&sortBy=obsDt&o=desc), while you are on the alert page, open the bookmark that you just created. Voila! It works on both desktop and mobile. Consult your browser's documentation if you're not sure how to edit and save bookmarks. Keeping the bookmark somewhere easily accessible like a bookmark toolbar would be ideal.
+Now when you go to any [eBird alert page](https://ebird.org/alert/summary?sid=SN36093&sortBy=obsDt&o=desc), while you are on the alert page, open the bookmark that you just created. Voila! It works on both desktop and mobile. Consult your browser's documentation if you're not sure how to edit and save bookmarks.
 
 ### Demo
 
@@ -41,7 +41,7 @@ Now when you go to any [eBird alert page](https://ebird.org/alert/summary?sid=SN
 
 ## So, what is the code doing?
 
-If you are curious how it works, here is a beat by beat breakdown of the [bookmarklet](https://github.com/parkerdavis1/eBird-compress-bookmarklet/blob/main/script.js).
+[Here](https://github.com/parkerdavis1/eBird-compress-bookmarklet/blob/main/script.js) is the full script for your perusal. If you are curious how it works, here is a beat by beat breakdown:
 
 First, we store a NodeList of all the DOM elements for observations in a variable called `observations`. If no observations are found (like if the script is run on a non-eBird alert page) it shows an alert message and stops the execution of the script. If the script has already been run on a page, it will alert you about that as well.
 
@@ -148,7 +148,7 @@ moveObservationsIntoWrappers(observations);
 appendSpeciesObsCount(uniqueSpeciesList);
 ```
 
-We then run the above code through [esbuild's code minifier](https://esbuild.github.io/api/#minify), which basically removes whitespace and shortens variable names to keep all the same functionality in a more compressed format. This results in the terse code I shared above:
+We then run the above code through [esbuild's code minifier](https://esbuild.github.io/api/#minify), which basically removes whitespace and shortens variable names to keep all the same functionality in a more compressed format. The result is terse code ready for a bookmark:
 
 <!-- prettier-ignore-start -->
 ```js
