@@ -24,7 +24,7 @@ I rebuilt this portfolio primarily to add a blog. I thought I'd use [Astro](astr
 
 ## Starter and Plugins
 
-After having built numerous Eleventy sites from scratch (and it really feels like "from scratch" with Eleventy, it doesn't even give you a config file out of the box), I felt comfortable taking some shortcuts and using code from the community.
+After having built numerous Eleventy sites from scratch, I felt comfortable taking some shortcuts and using code from the community.
 
 I started with the [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog/tree/main) for some sensible defaults, with image optimization, navigation, css & js bundling, feeds, and syntax highlighting configured.
 
