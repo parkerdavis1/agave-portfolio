@@ -283,7 +283,7 @@ code {
 }
 @media (max-width: 640px) {
 	.postlist-item {
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 }
 

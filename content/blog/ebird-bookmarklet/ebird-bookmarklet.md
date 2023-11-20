@@ -81,8 +81,8 @@ function getUniqueSpeciesList(observations) {
 We define a function that will create new `<details>` DOM elements for each species, assign the species name to a data-species attribute and a `<summary>` element, then mount the new DOM elements where they need to go.
 
 ```js
-function createUniqueSpeciesWrappers(uniqueSpeciesArray, containerNode) {
-	for (const species of uniqueSpeciesArray) {
+function createUniqueSpeciesWrappers(uniqueSpeciesSet, containerNode) {
+	for (const species of uniqueSpeciesSet) {
 		// Create wrapper node
 		const detailsNode = document.createElement("details");
 		// Add data-species attribute
@@ -124,19 +124,19 @@ The spacer nodes are also grabbed and moved because otherwise you end up with a 
 
 Next, we get the number of observations for each species and append that number to the name of each species.
 
+<!-- prettier-ignore-start -->
 ```js
 function appendSpeciesObsCount(list) {
 	for (species of list) {
 		const observationCount = document
 			.querySelectorAll(`[data-species="${species}"] .Observation`)
 			.length.toString();
-		const summaryNode = document.querySelector(
-			`[data-species="${species}"] summary`
-		);
+		const summaryNode = document.querySelector(`[data-species="${species}"] summary`);
 		summaryNode.innerText = `${summaryNode.innerText} (${observationCount})`;
 	}
 }
 ```
+<!-- prettier-ignore-end -->
 
 All that is left to do is call all of the functions to action!
 
