@@ -20,15 +20,17 @@ I previously built an alternative [Rare Bird Alert!](https://parkerdavis.dev/pro
 
 ## Here it is
 
+<!-- prettier-ignore-start -->
 ```js
 javascript:{{ebirdBookmarklet | safe}}
 ```
+<!-- prettier-ignore-end -->
 
 ## How to use it
 
 1. Create a random bookmark (this blog post for instance)
 2. Open your bookmark manager
-3. Edit the bookmark you just created, rename it to whatever you want (maybe "eBird Compress"), and replace the previous URL with  the code above
+3. Edit the bookmark you just created, rename it to whatever you want (maybe "eBird Compress"), and replace the previous URL with the code above
 4. Save your new bookmark
 
 Now when you go to any [eBird alert page](https://ebird.org/alert/summary?sid=SN36093&sortBy=obsDt&o=desc), while you are on the alert page, open the bookmark that you just created. Voila! It works on both desktop and mobile. Consult your browser's documentation if you're not sure how to edit and save bookmarks. Keeping the bookmark somewhere easily accessible like a bookmark toolbar would be ideal.
@@ -39,21 +41,26 @@ Now when you go to any [eBird alert page](https://ebird.org/alert/summary?sid=SN
 
 ## So, what is the code doing?
 
-First, we store a NodeList of all the DOM elements for observations in a variable. If no observations are found (like if the script is run on a non-eBird alert page) it shows an alert message and stops the execution of the script. If the script has already been run on a page, it will alert you about that as well.
+If you are curious how it works, here is a beat by beat breakdown of the [bookmarklet](https://github.com/parkerdavis1/eBird-compress-bookmarklet/blob/main/script.js).
 
+First, we store a NodeList of all the DOM elements for observations in a variable called `observations`. If no observations are found (like if the script is run on a non-eBird alert page) it shows an alert message and stops the execution of the script. If the script has already been run on a page, it will alert you about that as well.
+
+<!-- prettier-ignore-start -->
 ```js
 const observations = document.querySelectorAll(".Observation");
 if (observations.length === 0) {
 	alert("No eBird observations found on page!");
 	return;
 }
-if (document.querySelector("details")) {
+if (document.querySelector("[data-species]")) {
 	alert("Already run script. If you are having issues, reload page and try again.");
 	return;
 }
 ```
+<!-- prettier-ignore-end -->
 
-The parent container of the observations is stored in another variable. We define a function to extract the species name from an element, then a function to create an array of unique species names.
+The parent container of the observations is stored in another variable. We define a function to extract the species name from an element, then a function to create a set of unique species names. Sets can only store unique values so no need to check for duplicate species names.
+
 ```js
 const parentContainer = observations[0].parentNode;
 
@@ -63,12 +70,9 @@ function getSpeciesName(observation) {
 }
 
 function getUniqueSpeciesList(observations) {
-	let uniqueSpecies = [];
+	let uniqueSpecies = new Set();
 	for (const observation of observations) {
-		const commonName = getSpeciesName(observation);
-		if (!uniqueSpecies.includes(commonName)) {
-			uniqueSpecies.push(commonName);
-		}
+		uniqueSpecies.add(getSpeciesName(observation));
 	}
 	return uniqueSpecies;
 }
@@ -146,9 +150,11 @@ appendSpeciesObsCount(uniqueSpeciesList);
 
 We then run the above code through [esbuild's code minifier](https://esbuild.github.io/api/#minify), which basically removes whitespace and shortens variable names to keep all the same functionality in a more compressed format. This results in the terse code I shared above:
 
+<!-- prettier-ignore-start -->
 ```js
-javascript:{{ebirdBookmarklet | safe}}
+javascript: {{ebirdBookmarklet | safe}}
 ```
+<!-- prettier-ignore-end -->
 
 ## Feedback
 
