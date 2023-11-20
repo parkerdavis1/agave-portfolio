@@ -184,8 +184,12 @@ article a:hover,
 article a:active {
 	color: var(--text-color-link);
 }
-article ul {
+article ul,
+article ol {
 	padding-left: 1em;
+}
+article ol li {
+	list-style: decimal;
 }
 article li {
 	list-style: disc;
@@ -250,7 +254,7 @@ pre:not([class*="language-"]) {
 	word-break: normal;
 }
 code {
-	word-break: break-all;
+	word-break: keep-all;
 }
 
 /* Posts list */
@@ -338,4 +342,14 @@ article a.header-anchor {
 }
 h2 + .header-anchor {
 	font-size: 1.5em;
+}
+
+/* post formatting utilities */
+.small-image {
+	width: 50%;
+	margin-inline: auto;
+}
+
+.overflow-x-scroll {
+	overflow-x: scroll;
 }
