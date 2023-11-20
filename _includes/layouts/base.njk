@@ -5,35 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title or metadata.title }}</title>
         <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-        <link
-        rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
-        <meta name="generator" content="{{ eleventy.generator }}"> 
+        <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+        <meta name="generator" content="{{ eleventy.generator }}">
         <meta name="description" content="{{ description or metadata.description }}">
         {% if metadata.socialImg %}
-        <!-- Open Graph -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="{{metadata.url}}">
-        <meta property="og:locale" content="en_US">
-        <meta property="og:title" content="{{title or metadata.title}}">
-        <meta property="og:description" content="{{description or metadata.description}}">
-        <meta property="og:image" content="{{metadata.socialImg}}">
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="{{metadata.twitter}}">
-        <meta name="twitter:creator" content="{{metadata.twitter}}">
-        <meta name="twitter:url" content="{{metadata.url}}">
-        <meta name="twitter:title" content="{{title or metadata.title}}">
-        <meta name="twitter:description" content="{{description or metadata.description}}">
-        <meta name="twitter:image" content="{{metadata.socialImg}}">
+            <!-- Open Graph -->
+            <meta property="og:type" content="website">
+            <meta property="og:url" content="{{ metadata.url }}">
+            <meta property="og:locale" content="en_US">
+            <meta property="og:title" content="{{ title or metadata.title }}">
+            <meta property="og:description" content="{{ description or metadata.description }}">
+            <meta
+            property="og:image" content="{{ metadata.socialImg }}"> <!-- Twitter -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:site" content="{{ metadata.twitter }}">
+            <meta name="twitter:creator" content="{{ metadata.twitter }}">
+            <meta name="twitter:url" content="{{ metadata.url }}">
+            <meta name="twitter:title" content="{{ title or metadata.title }}">
+            <meta name="twitter:description" content="{{ description or metadata.description }}">
+            <meta name="twitter:image" content="{{ metadata.socialImg }}">
         {% endif %}
-
         {%- css %}
-            {% include "public/css/global.css" %}
+        {% include "public/css/global.css" %}
         {% endcss %}
-
         {% css "reset" %}
-            {% include "public/css/modern-normalize.css" %}
-            {% include "public/css/reset.css" %}
+        {% include "public/css/modern-normalize.css" %}
+        {% include "public/css/reset.css" %}
         {% endcss %}
         <style>
             {% getBundle "css", "reset" %}
@@ -45,5 +42,6 @@
         {% include "components/header.njk" %}
         {{ content | safe }}
         {% include "components/footer.njk" %}
+        <script>{% getBundle "js" %}</script>
     </body>
 </html>
