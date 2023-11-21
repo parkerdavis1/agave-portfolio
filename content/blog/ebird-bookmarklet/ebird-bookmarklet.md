@@ -33,7 +33,7 @@ javascript:{{ebirdBookmarklet | safe}}
 3. Edit the bookmark you just created, rename it to whatever you want (maybe "eBird Compress"), and replace the URL with the code above
 4. Save your new bookmark
 
-Now when you go to any [eBird alert page](https://ebird.org/alert/summary?sid=SN36093&sortBy=obsDt&o=desc) you can open the bookmark that you just created. Voila! 
+Now when you go to any [eBird alert page](https://ebird.org/alert/summary?sid=SN36093&sortBy=obsDt&o=desc) you can open the bookmark that you just created and voila! 
 
 ### Demo
 
