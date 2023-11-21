@@ -16,7 +16,7 @@ draft: false
 
 I only recently learned that [bookmarklets](https://thehistoryoftheweb.com/postscript/wait-whats-a-bookmarklet/) exist. A portmanteau of bookmark and applet, they are pieces of Javascript you can run from the address bar or be called from your bookmarks. The idea of running Javascript directly from the address bar sounds strange at first but has fun applications, literally.
 
-I previously built an alternative [Rare Bird Alert!](https://parkerdavis.dev/projects/rba/) web application whose primary feature was grouping rare eBird sightings by species into expandable `<details>` elements by pulling data from the public eBird API. Creating the same feature for your eBird [Needs Alerts](https://ebird.org/alerts) is a little trickier because it requires authentication and access to your personal eBird data. Instead of some convoluted login and CSV data upload system, how about we just modify the DOM on the actual eBird website to our liking and group sightings by species!
+I previously built an alternative [Rare Bird Alert!](https://parkerdavis.dev/projects/rba/) web application whose primary feature was grouping rare eBird sightings by species into expandable `<details>` elements by pulling data from the public eBird API. Creating the same feature for your eBird [Needs Alerts](https://ebird.org/alerts) is a little trickier because it requires authentication and access to your personal eBird data. Instead of some convoluted login and CSV data upload system, how about we just modify the DOM on the actual eBird website to  group sightings by species?
 
 ## Here it is
 
@@ -33,15 +33,17 @@ javascript:{{ebirdBookmarklet | safe}}
 3. Edit the bookmark you just created, rename it to whatever you want (maybe "eBird Compress"), and replace the URL with the code above
 4. Save your new bookmark
 
-Now when you go to any [eBird alert page](https://ebird.org/alert/summary?sid=SN36093&sortBy=obsDt&o=desc), while you are on the alert page, open the bookmark that you just created. Voila! It works on both desktop and mobile. Consult your browser's documentation if you're not sure how to edit and save bookmarks.
+Now when you go to any [eBird alert page](https://ebird.org/alert/summary?sid=SN36093&sortBy=obsDt&o=desc) you can open the bookmark that you just created. Voila! 
 
 ### Demo
 
 {% animatedImage "./ebird-compress-demo.gif", "eBird compress demo" %}
 
+It works on both desktop and mobile. Consult your browser's documentation if you're not sure how to edit and save bookmarks.
+
 ## So, what is the code doing?
 
-[Here](https://github.com/parkerdavis1/eBird-compress-bookmarklet/blob/main/script.js) is the full script for your perusal. If you are curious how it works, here is a beat by beat breakdown:
+[Here](https://github.com/parkerdavis1/eBird-compress-bookmarklet/blob/main/script.js) is the full non-minified script for your perusal. If you are curious how it works, here is a beat by beat breakdown:
 
 First, we store a NodeList of all the DOM elements for observations in a variable called `observations`. If no observations are found (like if the script is run on a non-eBird alert page) it shows an alert message and stops the execution of the script. If the script has already been run on a page, it will alert you about that as well.
 
