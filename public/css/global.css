@@ -8,6 +8,8 @@
 }
 
 :root {
+	color-scheme: light dark;
+	
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #c0c0c0;
 	--color-gray-90: #333;

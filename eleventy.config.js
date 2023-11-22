@@ -12,7 +12,7 @@ const {
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const pluginTOC = require("eleventy-plugin-nesting-toc");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
-const lightningCss = require("@11tyrocks/eleventy-plugin-lightningcss");
+// const lightningCss = require("@11tyrocks/eleventy-plugin-lightningcss");
 const markdownItAttrs = require("markdown-it-attrs");
 const pluginCodeClipboard = require("eleventy-plugin-code-clipboard");
 
@@ -44,7 +44,7 @@ module.exports = function (eleventyConfig) {
 		showEmoji: false,
 		label: "min read",
 	});
-	eleventyConfig.addPlugin(lightningCss);
+	// eleventyConfig.addPlugin(lightningCss);
 	eleventyConfig.addPlugin(pluginCodeClipboard);
 
 	// Official plugins
