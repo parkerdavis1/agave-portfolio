@@ -19,7 +19,7 @@ I like to add a little flair throughout the year though and with Thanksgiving be
 
 {% animatedImage "./scrolling-turkey.gif", "Links page with scrolling turkey", "small-image" %}
 
-I know, its beautiful. After you take a moment to recover, let's go through the code.
+I know, its breathtaking. After you take a moment to recover, let's go through the code.
 
 ## How did I do it?
 
@@ -109,12 +109,12 @@ Create a @keyframes animation with an identifier of "trot" to move it from the l
 }
 ```
 
-The CSS property `animation-delay` only applies to the first iteration of an animation so to create a delayed turkey entrance for every repeated iteration,  I opted to position the turkey further to the left to create the delay effect.
+The CSS property `animation-delay` only applies to the first iteration of an animation so to create a delay before each turkey entrance,  I opted to position the turkey further to the left at the start of each iteration.
 
 This all looks pretty good but there are two problems:
 
 1) The speed at which the turkey trots depends on the width of the browser window since the animation duration is a set value
-2) The width of the path the turkey trots does is not updated when the user resizes their browser window. For animations, the relative values (vw) get converted to absolute values but do not automatically get updated when the window resizes.
+2) The width of the path the turkey trots is not updated when the user resizes the browser window with some browsers. For animations, the relative values (vw) get converted to absolute values but do not automatically get updated when the window resizes.
 
 We're going to need a little bit of Javascript for this one.
 
@@ -189,7 +189,7 @@ Now the turkey can be added to the page by loading the turkey CSS and JS files v
 <script src="assets/turkey/turkey.js" defer></script>
 ```
 
-The links page is an Eleventy site using the Nunjucks templating language, so to include the code I just add the following code to the `<head>` of my links page:
+My links page is an Eleventy site using the Nunjucks templating language, so to include the code I just add the following code to the `<head>` of my links page:
 
 ```html
 {% raw %}{% include "assets/turkey/turkey.html" %}{% endraw %}

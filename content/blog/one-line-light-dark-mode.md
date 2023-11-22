@@ -7,7 +7,7 @@ tags:
     - css
 draft: false
 ---
-## The One Line
+## 1 Line
 
 ```css
 :root { color-scheme: light dark; }
@@ -31,10 +31,10 @@ This doesn't mean you can't further refine the color scheme of your site. You ca
 
 If the need arises, you can set the property on individual elements or sections of your site and even include the 'only' keyword to ensure that things like [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out) don't override the intended color scheme.
 
-One line of CSS to get light and dark mode for free rocks*.
+One line of CSS to get light and dark mode for free rocks...
 
 ## Disclaimer
 
-*Note: At the time of writing, Safari does not have suitably contrasting link colors in their default dark style sheet for some reason. Be sure to set those colors if you use this property.
+...mostly. At the time of writing, Safari does not have suitably contrasting link colors in their default dark style sheet for some reason. Be sure to set those colors if you use this property.
 
 [Useful demo site for viewing browsers default coloring for various elements](https://color-scheme-demo.glitch.me)
