@@ -25,9 +25,13 @@
     animation-timing-function: linear;
 }
 
+.turkey:hover {
+    cursor: pointer;
+}
+
 @keyframes trot {
     0% {
-        left: calc(-1 * var(--turkey-width));
+        left: calc(-4 * var(--turkey-width));
     }
     100% {
         left: var(--container-width);

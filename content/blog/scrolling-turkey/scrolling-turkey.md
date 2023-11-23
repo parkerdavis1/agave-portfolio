@@ -200,8 +200,11 @@ All done!
 Happy Thanksgiving!
 
 <div class="turkey-container"><div class="turkey">
-{% image "./turkey/turkey.png", "Turkey" %}
+{% image "./turkey/turkey.png", "Don't click me" %}
 </div></div>
 
 {% css %}{% include "./turkey/turkey.css" %} {% endcss %}
-{% js %} {% include "./turkey/turkey.js" %} {% endjs %}
+{% js %} 
+{% include "./turkey/sprite.js" %}
+{% include "./turkey/turkey.js" %} 
+{% endjs %}
