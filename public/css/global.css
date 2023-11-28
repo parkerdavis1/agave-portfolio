@@ -114,6 +114,9 @@ html {
 }
 body {
 	max-width: var(--body-width);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 /* flow  */
 .flow > * + * {
@@ -201,13 +204,12 @@ article li li {
 }
 article pre {
 	font-size: var(--step--2);
-
 }
 main {
 	padding-inline: 1rem;
 	padding-block-end: 1rem;
-	flex-basis: var(--body-width);
 	max-width: 100%;
+	flex-grow: 1;
 }
 main :first-child {
 	margin-top: 0;
