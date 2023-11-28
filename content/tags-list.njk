@@ -5,10 +5,8 @@ layout: layouts/page.njk
 <h1>Tags</h1>
 
 <ul>
-{% for tag in collections.all | getAllTags | filterTagList %}
-	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag"># {{ tag }}</a></li>
+{% for tag in collections.all | getAllTagsWithCount %}
+	{% set tagUrl %}/tags/{{ tag[0] | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}"># {{ tag[0] }}</a> - {{tag[1]}}</li>
 {% endfor %}
 </ul>
-
-{# TODO: add number of posts with tag #}

@@ -1,5 +1,11 @@
 const { DateTime } = require("luxon");
 
+function filterTagList(tags) {
+	return (tags || []).filter(
+		(tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
+	);
+}
+
 module.exports = (eleventyConfig) => {
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -40,11 +46,24 @@ module.exports = (eleventyConfig) => {
 		return Array.from(tagSet);
 	});
 
-	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(
-			(tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
-		);
-	});
+	eleventyConfig.addFilter("getAllTagsWithCount", (collection) => {
+		let tags = {};
+		for (let item of collection) {
+			(item.data.tags || []).forEach(tag => {
+				if (Object.keys(tags).includes(tag)) {
+					tags[tag] = tags[tag] + 1
+				} else {
+					tags[tag] = 1
+				}
+			})
+		}
+		const sortedFilteredEntries = Object.entries(tags)
+			.filter(tag => ["all", "nav", "post", "posts"].indexOf(tag[0]) === -1)
+			.sort((a,b) => b[1] - a[1])
+		return sortedFilteredEntries
+	})
+
+	eleventyConfig.addFilter("filterTagList", filterTagList);
 
 	eleventyConfig.addFilter("featured", (collection) => {
 		return collection.filter((x) => x.data.featured);
