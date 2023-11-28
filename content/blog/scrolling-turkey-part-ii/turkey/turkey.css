@@ -1,0 +1,39 @@
+:root {
+    --turkey-width: 75px;
+    --animation-duration: 30s;
+    --container-width: 570px;
+}
+.turkey-container {
+    height: 75px;
+    position: relative;
+    overflow: hidden;
+}
+
+.turkey {
+    background-image: url('turkey/turkey.png');
+    height: var(--turkey-width);
+    width: var(--turkey-width);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: calc(-1 * var(--turkey-width));
+    animation-name: trot;
+    animation-duration: var(--animation-duration);
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.turkey:hover {
+    cursor: pointer;
+}
+
+@keyframes trot {
+    0% {
+        left: calc(-4 * var(--turkey-width));
+    }
+    100% {
+        left: var(--container-width);
+    }
+}
