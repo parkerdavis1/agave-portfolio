@@ -8,12 +8,12 @@ tags:
   - javascript
   - css
   - turkeys
-draft: true
+draft: false
 eleventyExcludeFromCollections: false
 ---
 In my last post I made a [scrolling turkey](/blog/scrolling-turkey) but quickly realized, it needed to gobble.
 
-I started by getting a few audio files of turkeys gobbling. I assembled the samples into a single file so that I could play them as audio sprites with a single http request. I used OcenAudio to do it manually but I probably should have used the NPM package [audiosprite](https://www.npmjs.com/package/audiosprite) which uses FFMPEG to automatically create audio sprites with associated metadata. 
+I started by getting a few audio files of turkeys gobbling. I assembled the samples into a single file so that I could load them with a single http request but play them as audio sprites. I used OcenAudio to do it manually but I probably should have used the NPM package [audiosprite](https://www.npmjs.com/package/audiosprite) which uses FFMPEG to automatically create audio sprites with associated metadata. 
 
 I grabbed the Sprite class from [this repo](https://github.com/musicandcode/WAAPI-Audio-Sprite/blob/main/app.js) and in its simplicity it works wonders!
 
@@ -56,7 +56,8 @@ class Sprite {
 }
 ```
 
-The class loads the audio file as an audio buffer. You pass in an options object with a path to the audio file in `src`, and a `sprite` object with named sprite keys with start times and duration. I just plugged in my audio file and the metadata for the three gobbles named a, b, and c:
+An instance of the class loads the audio file as an audio buffer. You pass in an options object with a path to the audio file in `src`, and a `sprite` object with named sprite keys with start times and duration in milliseconds. I just plugged in my audio file and the metadata for the three gobbles named a, b, and c:
+
 ```javascript
 const gobble = new Sprite({
 	src: "assets/turkey/turkey-sprite.m4a",
@@ -68,7 +69,7 @@ const gobble = new Sprite({
 })
 ```
 
-I then add an event listener after the page loads to handle when someone clicks the turkey: 
+I then add an event listener after the page loads to handle when someone clicks the turkey:
 
 ```javascript
 window.addEventListener('load', () => {
@@ -81,8 +82,7 @@ window.addEventListener('load', () => {
 })
 ```
 
-As a result, I am filled with delight. 
-
+As a result, I am filled with delight.
 
 <div class="turkey-container"><div class="turkey">
 {% image "./turkey/turkey.png", "Don't click me" %}
