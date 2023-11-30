@@ -1,8 +1,9 @@
 const { DateTime } = require("luxon");
 
+const filteredTags = ["all", "nav", "post", "posts", "projects"]
 function filterTagList(tags) {
 	return (tags || []).filter(
-		(tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
+		(tag) => filteredTags.indexOf(tag) === -1
 	);
 }
 
@@ -11,6 +12,12 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
 		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(
+			format || "DDD"
+		);
+	});
+
+	eleventyConfig.addFilter("readableISODate", (dateObj, format, zone) => {
+		return DateTime.fromISO(dateObj, { zone: zone || "utc" }).toFormat(
 			format || "DDD"
 		);
 	});
@@ -58,8 +65,8 @@ module.exports = (eleventyConfig) => {
 			})
 		}
 		const sortedFilteredEntries = Object.entries(tags)
-			.filter(tag => ["all", "nav", "post", "posts"].indexOf(tag[0]) === -1)
-			.sort((a,b) => b[1] - a[1])
+			.filter(tagEntry => filteredTags.indexOf(tagEntry[0]) === -1)
+			.sort((a,b) => b[1] - a[1]);
 		return sortedFilteredEntries
 	})
 

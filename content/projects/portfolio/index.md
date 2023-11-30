@@ -13,7 +13,7 @@ liveUrl: https://parkerdavis.dev/
 v1: https://v1.parkerdavis.dev
 featured: false
 draft: false
-date: 2023-11-19
+publishedDate: 2023-11-19
 ---
 
 ## Links

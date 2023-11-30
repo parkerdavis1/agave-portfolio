@@ -1,8 +1,7 @@
 ---
 title: I added a scrolling turkey to my links page and you can too
 description: Gobble gobble
-date: 2023-11-22
-updatedOn: 2023-11-22
+publishedDate: 2023-11-22
 tags:
     - css
     - javascript

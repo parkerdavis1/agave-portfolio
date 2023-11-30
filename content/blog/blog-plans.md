@@ -1,8 +1,7 @@
 ---
 title: My plans for this blog
 description: I lay out my plans for this blog
-date: 2023-11-16
-updatedOn: 2023-11-16
+publishedDate: 2023-11-16
 tags:
   - updates
 ---
