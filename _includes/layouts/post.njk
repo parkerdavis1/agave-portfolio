@@ -13,12 +13,12 @@ layout: layouts/post-project.njk
         <article class="flow">
             <h1>{{ title }}</h1>
             <div class="post-metadata">
-                <div>Published:
-                    <time datetime="{{ publishedDate | htmlDateString }}">{{ publishedDate | readableDate }}</time>
+                <div>{% if updatedOn %}Published:{% endif %}
+                    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
                 </div>
-                {% if publishedDate | htmlDateString !== page.date | htmlDateString %}
+                {% if updatedOn %}
                 <div>Updated:
-                    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+                    <time datetime="{{ updatedOn | htmlDateString }}">{{ updatedOn | readableDate }}</time>
                 </div>
                 {% endif %}
                 {% set tags = tags | filterTagList %}

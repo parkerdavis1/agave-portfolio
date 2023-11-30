@@ -10,7 +10,7 @@ techtags:
 githubUrl: https://github.com/parkerdavis1/eBirdRareBird
 liveUrl: https://rarebird.parkerdavis.dev/US-AZ-013?days=7
 featured: true
-publishedDate: 2023-11-16
+date: 2023-11-16
 ---
 ## Links
 {% include "components/project-links.njk" %}

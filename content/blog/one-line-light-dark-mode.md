@@ -1,7 +1,7 @@
 ---
 title: Responsive dark/light mode with 1 line of CSS
 description: Note to self for next time I make a super simple HTML page
-publishedDate: 2023-11-21
+date: 2023-11-21
 tags: 
     - css
 draft: false
