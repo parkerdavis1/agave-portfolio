@@ -15,7 +15,7 @@ numberOfLatestPostsToShow: 5
 </section>
 <section class="flow">
     <h2>Recent Posts</h2>
-    {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+    {% set postslist = collections.posts | reverse | head(-1 * numberOfLatestPostsToShow) %}
     {% include "components/postslist.njk" %}
 </section>
 <section class="flow">
