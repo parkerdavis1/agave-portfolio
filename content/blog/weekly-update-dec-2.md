@@ -66,7 +66,7 @@ I took care of some preliminary planning for a website rebuild for the [Center f
 
 ### RainCrow 🪲
 
-I took care of a bug in [RainCrow](https://raincrow.netlify.app) where users wouldn't be able to view their last weather request of the day. On the final weather request, the data was gathered and processed, the `dailyCount` incremented, but instead of displaying the data, there was the error message indicating that they had reached their limit – which is true, but less important than the just gathered weather data available to be displayed. That is fixed now. It just took a little bit of [conditional finessing and light refactoring](https://github.com/parkerdavis1/raincrow-sveltekit/commit/bf120b8ed09d783aadb0288eda567cf6965cbb90) in the `ResultsPane.svelte` component.
+I took care of a bug in [RainCrow](https://raincrow.netlify.app) where users wouldn't be able to view their last weather request of the day. On the final weather request, the data was gathered and processed, the `dailyCount` incremented, but instead of displaying the data, there was the error message indicating that they had reached their limit – which is true, but less important than the just-gathered weather data available to be displayed. That is fixed now. It just took a little bit of [conditional finessing and light refactoring](https://github.com/parkerdavis1/raincrow-sveltekit/commit/bf120b8ed09d783aadb0288eda567cf6965cbb90) in the `ResultsPane.svelte` component.
 
 ### Writing
 
