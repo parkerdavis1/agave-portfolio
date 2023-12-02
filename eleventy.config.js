@@ -19,6 +19,7 @@ const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
 const pluginFilters = require("./eleventy.config.filters.js");
 const pluginShortcodes = require("./eleventy.config.shortcodes.js");
+const pluginCollections = require('./eleventy.config.collections.js');
 
 module.exports = function (eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
@@ -59,6 +60,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginBundle);
 	eleventyConfig.addPlugin(pluginFilters);
 	eleventyConfig.addPlugin(pluginShortcodes);
+	eleventyConfig.addPlugin(pluginCollections);
 
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", (mdLib) => {

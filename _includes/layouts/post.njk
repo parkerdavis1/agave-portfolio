@@ -4,52 +4,57 @@ layout: layouts/post-project.njk
 
 <div class="toc-container">
     {% if content | toc %}
-    <aside>
-        <span class="toc-heading">Table of Contents</span>
-        {{ content | toc | safe }}
-    </aside>
+        <aside>
+            <span class="toc-heading">Table of Contents</span>
+            {{ content | toc | safe }}
+        </aside>
     {% endif %}
     <main id="skip" class="flow">
         <article class="flow">
             <h1>{{ title }}</h1>
-            <span class="post-metadata">
-                <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-                <span>/ {{ content | emojiReadTime }}</span>
-            </span>
-            {% set tags = tags | filterTagList %}
-            {% if tags.length > 0 %}
-                <div class="tags-container">
-                {% include "icons/tags.svg" %}
-                    {%- for tag in tags | filterTagList %}
-                        {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-                        <span>
-                            <a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a>
-                            {%- if not loop.last %},
-                            {% endif %}
-                        </span>
-                    {%- endfor %}
+            <div class="post-metadata">
+                <div>{% if updatedOn %}Published:{% endif %}
+                    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
                 </div>
-            {% endif %}
-            
+                {% if updatedOn %}
+                <div>Updated:
+                    <time datetime="{{ updatedOn | htmlDateString }}">{{ updatedOn | readableDate }}</time>
+                </div>
+                {% endif %}
+                {% set tags = tags | filterTagList %}
+                {% if tags.length > 0 %}
+                    <div class="tags-container">
+                        {% include "icons/tags.svg" %}
+                        {%- for tag in tags | filterTagList %}
+                            {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                            <span>
+                                <a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a>
+                                {%- if not loop.last %},
+                                {% endif %}
+                            </span>
+                        {%- endfor %}
+                    </div>
+                {% endif %}
+            </div>
             {{ content | safe }}
         </article>
-    {%- if collections.posts %}
-        {%- set previousPost = collections.posts | getPreviousCollectionItem %}
-        {%- set nextPost = collections.posts | getNextCollectionItem %}
-        {%- if nextPost or previousPost %}
-            <ul class="links-nextprev">
-                {%- if previousPost %}
-                    <li>Previous:
-                        <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-                    </li>
-                {% endif %}
-                {%- if nextPost %}
-                    <li>Next:
-                        <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-                    </li>
-                {% endif %}
-            </ul>
+        {%- if collections.posts %}
+            {%- set previousPost = collections.posts | getPreviousCollectionItem %}
+            {%- set nextPost = collections.posts | getNextCollectionItem %}
+            {%- if nextPost or previousPost %}
+                <ul class="links-nextprev">
+                    {%- if previousPost %}
+                        <li>Previous:
+                            <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+                        </li>
+                    {% endif %}
+                    {%- if nextPost %}
+                        <li>Next:
+                            <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            {%- endif %}
         {%- endif %}
-    {%- endif %}
     </main>
 </div>

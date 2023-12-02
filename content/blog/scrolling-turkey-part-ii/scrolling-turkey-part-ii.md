@@ -2,7 +2,6 @@
 title: "Scrolling Turkey Part II: The Gobble"
 description: A trotting turkey is awesome, but what about a gobbling turkey.
 date: 2023-11-28
-updatedOn: 2023-11-28
 tags:
   - web-audio
   - javascript

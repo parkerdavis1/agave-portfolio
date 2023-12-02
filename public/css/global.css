@@ -230,6 +230,10 @@ header:after {
 	padding: 1em 0;
 }
 
+.links-nextprev li {
+	line-height: 2;
+}
+
 table {
 	margin: 1em 0;
 }
@@ -297,7 +301,6 @@ code {
 	align-items: center;
 	justify-content: center;
 	font-style: italic;
-	font-size: var(--step--1)
 }
 .postlist-item > .post-tag {
 	align-self: center;
@@ -305,12 +308,8 @@ code {
 
 /* Tags list */
 .post-metadata {
-	display: inline-flex;
-	flex-wrap: wrap;
-	gap: 0.5em;
-	list-style: none;
-	padding: 0;
-	margin: 0;
+	font-size: var(--step--1);
+	margin-bottom: 2rem;
 }
 
 .tags-container {

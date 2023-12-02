@@ -2,7 +2,6 @@
 title: eBird Compress, my first bookmarklet
 description: I create my first bookmarklet to group eBird sightings by species
 date: 2023-11-20
-updatedOn: 2023-11-20
 tags:
   - bookmarklet
   - javascript
