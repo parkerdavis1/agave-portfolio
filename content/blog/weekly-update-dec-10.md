@@ -48,7 +48,7 @@ There are some more error cases to account for but a good start on a 'Must have'
 
 I also got started with a website rebuild I'm consulting on. I'm working off an awesome design from [Ioan Butiu](https://www.ioan.website/) and thinking carefully about how best to structure the data, content, and components for maximum code legibility and ease of editing down the road. CCAM website maintainers will be tech-saavy so using markdown and other simple data structures for editing content is preferable but bringing in a CMS like Sanity might be on the table as well.
 
-## Advent of SVGs
+## Advent of SVG
 
 I came across a fun Christmas-y [SVG tutorial](https://svg-tutorial.com/) (which for some reason is not called Advent of SVG). I've used SVGs plenty but never considered manually writing the code or understanding much of its contents beyond a few choice attributes. Learning fundamentals like this makes me unreasonably happy.
 
