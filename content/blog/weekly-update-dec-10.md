@@ -25,11 +25,11 @@ RainCrow has seen an uptick in use lately, with several days in a row exceeding 
 
 ### Timezone efficiency
 
-With fresh eyes, I was able to fix an old problem and cut down on OpenWeather API calls by **over 33%**! When RainCrow was fully client-side, I was unable to use node.js libraries like [node-geo-tz](https://github.com/evansiroky/node-geo-tz) that can return timezone names from GPS coordinates because that would involve sending the entirety of worldwide timezone data to the browser for every use. Since OpenWeather returns timezone offset data with their requests, I initially settled on making an additional preliminary OpenWeather request to get the timezone data before making the actual weather requests. 
+With fresh eyes, I was able to fix an old problem and cut down on OpenWeather API calls by **over 33%**! When RainCrow was fully client-side, I was unable to use node.js libraries like [node-geo-tz](https://github.com/evansiroky/node-geo-tz) that can return timezone names from GPS coordinates because that would involve sending the entirety of worldwide timezone data to the browser for every use. Since OpenWeather returns timezone offset data with their requests, I initially settled on making an additional preliminary OpenWeather request to get the timezone data before making the actual weather requests.
 
 However, since moving to Sveltekit and therefore having servers (or more specifically, serverless functions) at my disposal, `node-geo-tz` was now on the table. After a bit more head-scratching on how to convert a named timezone to a UTC offset ([they are not equivalent!](https://stackoverflow.com/tags/timezone/info)) I was able to eliminate the extra OpenWeather API timezone call. This will cut down requests by 33-50%, which rocks.
 
-I used Day.js to append the timezone name returned from node-geo-tz to all datetimes, which then uses the native Internationalization API to calculate the offset and give you the proper unix time. 
+I used Day.js to append the timezone name returned from node-geo-tz to all datetimes, which then uses the native Internationalization API to calculate the offset and give you the proper unix time.
 
 ```js
 dayjs(date).tz(timezone, true).unix()
@@ -50,7 +50,9 @@ I also got started with a website rebuild I'm consulting on. I'm working off an 
 
 ## Advent of SVGs
 
-I came across a fun christmas-y [SVG tutorial](https://svg-tutorial.com/) (which for some reason is not called Advent of SVG). I've used SVGs plenty but never considered manually writing the code or understanding much of its contents beyond a few choice attributes. Learning fundamentals like this makes me unreasonably happy. Now, I leave you with a cheery SVG tree:
+I came across a fun Christmas-y [SVG tutorial](https://svg-tutorial.com/) (which for some reason is not called Advent of SVG). I've used SVGs plenty but never considered manually writing the code or understanding much of its contents beyond a few choice attributes. Learning fundamentals like this makes me unreasonably happy.
+
+And now, I leave you with a cheery SVG tree:
 
 <svg width="200" height="400" viewBox="-100 -200 200 400" style="margin: auto;">
   <polygon points="0,0 80,120 -80,120" fill="#234236" />
