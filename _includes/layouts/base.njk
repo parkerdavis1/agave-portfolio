@@ -37,10 +37,11 @@
             {% getBundle "css", "reset" %}
             {% getBundle "css" %}
         </style>
-
         <!-- plausible analytics -->
-        <script defer data-domain="parkerdavis.dev" src="https://plausible.parkerdavis.dev/js/script.js"></script>
-
+        <script
+            defer
+            src="https://plausible.parkerdavis.dev/js/script.js"
+            onload="this.setAttribute('data-domain',window.location.host)"></script>
     </head>
     <body>
         <a href="#skip" class="visually-hidden">Skip to main content</a>
