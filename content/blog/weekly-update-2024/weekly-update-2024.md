@@ -13,7 +13,7 @@ tags:
   - observable-plot
   - CCAM
   - job-hunt
-draft: true
+draft: false
 eleventyExcludeFromCollections: false
 ---
 
@@ -58,7 +58,7 @@ Being the first bird I detected after the new year rolled in, 2024 is the year o
 
 ## Coding
 
-I have been doing quite a bit of coding as well. I've been hard at work on the CCAM website and we're almost ready to launch. I'm working on making RainCrow a full-blown SaaS app with authentication and payment processing that allows people to pay for weather requests when the freebies run out. I've also been learning about data visualization with [D3](https://d3js.org/) and [Observable Plot](https://observablehq.com/plot/) in order to start working on a web application to allow for more intuitive data exploration for the [CAP-LTER datasets](https://sustainability-innovation.asu.edu/caplter/research/long-term-monitoring/bird-censuses/).
+I have been doing quite a bit of coding as well. I've been hard at work on the CCAM website and we're almost ready to launch. I'm working on making [RainCrow](/projects/raincrow) a full-blown SaaS app with authentication and payment processing that allows people to pay for weather requests when the freebies run out. I've also been learning about data visualization with [D3](https://d3js.org/) and [Observable Plot](https://observablehq.com/plot/) in order to start working on a web application to allow for more intuitive data exploration for the [CAP-LTER datasets](https://sustainability-innovation.asu.edu/caplter/research/long-term-monitoring/bird-censuses/).
 
 ### Job Search
 
