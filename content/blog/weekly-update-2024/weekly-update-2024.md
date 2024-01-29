@@ -17,7 +17,7 @@ draft: false
 eleventyExcludeFromCollections: false
 ---
 
-I'm back from a brief blog hiatus! January is quickly coming to a close so I figured I ought to give a brief update on what has been going on for me. Since last time there have been holiday celebrations, several birthdays, quality time with friends and family, work done for CAP-LTER and...
+I'm back from a brief blog hiatus. January is quickly coming to a close so I figure I ought to give a brief update on what has been going on for me. Since last time there have been holiday celebrations, several birthdays, quality time with friends and family, work done for CAP-LTER and...
 
 ...I went to my first Suns/NBA game:
 {% image "./suns-game.jpg", "" %}
@@ -26,7 +26,7 @@ I'm back from a brief blog hiatus! January is quickly coming to a close so I fig
 
 {% image "./engaged.jpg", "", "engage" %}
 
-## 2023 Bird stats
+<!-- ## 2023 Bird stats
 
 {% image "./ebird-stats.png", "eBird stats for 2023" %}
 
@@ -54,7 +54,7 @@ I'm back from a brief blog hiatus! January is quickly coming to a close so I fig
 
 ### 2024 Bird of the Year
 
-Being the first bird I detected after the new year rolled in, 2024 is the year of the [Abert's Towhee](https://ebird.org/species/abetow). May this year be filled with many beeps and subtle beauty.
+Being the first bird I detected after the new year rolled in, 2024 is the year of the [Abert's Towhee](https://ebird.org/species/abetow). May this year be filled with many beeps and subtle beauty. -->
 
 ## Coding
 
