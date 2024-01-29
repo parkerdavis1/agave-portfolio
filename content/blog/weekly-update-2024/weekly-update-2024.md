@@ -1,6 +1,6 @@
 ---
-title: "[Weekly Update] Happy 2024! Personal updates, birds, code"
-description: After an eventful holiday season, it's time to get back to regular updates
+title: "[Weekly Update] Happy 2024!"
+description: After an eventful holiday season, it's time to resume regular updates
 date: 2024-01-29
 updatedOn:
 tags:
