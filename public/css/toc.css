@@ -1,32 +1,32 @@
 .toc-container {
-    display: flex;
-    align-items: flex-start;
-    column-gap: 1.5rem;
+	display: flex;
+	align-items: flex-start;
+	column-gap: 1.5rem;
 }
 
 aside {
-    position: sticky;
-    top: 5rem;
-    order: 2;
-    margin-inline-end: -16rem;
-    font-size: var(--step--2);
-    min-width: 10rem;
+	position: sticky;
+	top: 5rem;
+	order: 2;
+	margin-inline-end: -16rem;
+	font-size: var(--step--2);
+	min-width: 10rem;
 }
 
-@media screen and (max-width: 61rem) {
-    aside {
-        display: none;
-    }
+@media screen and (max-width: 66rem) {
+	aside {
+		display: none;
+	}
 }
 
 .toc-heading {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .toc ol ol {
-    margin-inline-start: 1em;
+	margin-inline-start: 1em;
 }
 
 .toc li {
-    margin-block-start: 0.25rem;
+	margin-block-start: 0.25rem;
 }

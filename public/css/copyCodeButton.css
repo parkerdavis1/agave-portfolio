@@ -1,8 +1,20 @@
 pre[class*="language-"] {
 	position: relative;
+	word-break: break-all;
+	white-space: pre-wrap;
 }
 
-pre[class*="language-"] button {
+pre[class*="language-"] code {
+	max-width: 100%;
+	word-break: break-all;
+}
+
+.highlight {
+	position: relative;
+}
+
+pre[class*="language-"] button,
+.highlight button {
 	position: absolute;
 	top: 5px;
 	right: 5px;
@@ -13,6 +25,7 @@ pre[class*="language-"] button {
 	border-radius: 0.25rem;
 }
 
-pre[class*="language-"] button:hover {
+pre[class*="language-"] button:hover,
+.highlight button:hover {
 	background: #52525e;
 }

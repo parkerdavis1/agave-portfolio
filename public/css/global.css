@@ -21,7 +21,7 @@
 
 	--syntax-tab-size: 2;
 
-	--body-width: 40rem;
+	--body-width: 45rem;
 
 	/* Fluid  */
 	--step--2: clamp(0.7813rem, 0.793rem + -0.0152vw, 0.79rem);
@@ -267,6 +267,7 @@ pre:not([class*="language-"]) {
 }
 code {
 	word-break: keep-all;
+	/* word-break: break-all; */
 }
 
 /* Posts list */
@@ -359,4 +360,8 @@ h2 + .header-anchor {
 
 .overflow-x-scroll {
 	overflow-x: scroll;
+}
+
+article img {
+	margin-inline: auto;
 }

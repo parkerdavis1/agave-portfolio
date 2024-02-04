@@ -9,7 +9,18 @@ layout: layouts/base.njk
 {% include "public/css/tooltips.css" %}
 {% include "public/css/copyCodeButton.css" %}
 {% endcss %}
-{{ content | safe }}
+{# START, divs around Prism `pre``code` stuff #}
+{% set modifiedContent = content %}
+{% set withoutDivStart = '<pre class="language-' %}
+{% set withDivStart = '<div class="highlight"><pre class="language-' %}
+{% set withoutDivEnd = '</code></pre>' %}
+{% set withDivEnd = '</code></pre></div>' %}
+{% if withoutDivStart in content %}
+    {% set modifiedContent = content | replace (withoutDivStart, withDivStart) %}
+    {% set modifiedContent = modifiedContent | replace (withoutDivEnd, withDivEnd) %}
+{% endif %}
+{#   END, divs around Prism `pre``code` stuff #}
+{{ modifiedContent | safe }}
 {% initClipboardJS %}
 {% js %}
 {% include "public/scripts/fadeInPhotos.js" %}
