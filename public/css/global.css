@@ -365,3 +365,11 @@ h2 + .header-anchor {
 article img {
 	margin-inline: auto;
 }
+
+article kbd {
+	background: #ddd;
+	border-radius: 4px;
+	padding: 2px 4px;
+	color: black;
+	font-size: var(--step--1);
+}
