@@ -19,15 +19,15 @@ const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
 const pluginFilters = require("./eleventy.config.filters.js");
 const pluginShortcodes = require("./eleventy.config.shortcodes.js");
-const pluginCollections = require('./eleventy.config.collections.js');
+const pluginCollections = require("./eleventy.config.collections.js");
 
 module.exports = function (eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
-		"./public/": "/"
+		"./public/": "/",
 	});
-	eleventyConfig.addPassthroughCopy("content/**/*.m4a")
+	eleventyConfig.addPassthroughCopy("content/**/*.m4a");
 
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
@@ -70,7 +70,6 @@ module.exports = function (eleventyConfig) {
 			level: [1, 2, 3, 4],
 			slugify: eleventyConfig.getFilter("slugify"),
 		});
-		mdLib.use(pluginCodeClipboard.markdownItCopyButton);
 	});
 
 	// Features to make your build faster (when you need them)

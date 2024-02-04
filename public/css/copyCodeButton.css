@@ -1,0 +1,18 @@
+pre[class*="language-"] {
+	position: relative;
+}
+
+pre[class*="language-"] button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	padding: 0.25rem 0.5rem;
+	background: #2b2a33;
+	color: white;
+	border-radius: 0.25rem;
+}
+
+pre[class*="language-"] button:hover {
+	background: #52525e;
+}

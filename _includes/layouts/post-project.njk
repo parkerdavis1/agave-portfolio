@@ -7,9 +7,11 @@ layout: layouts/base.njk
 {% include "public/css/prism/prism-diff.css" %}
 {% include "public/css/toc.css" %}
 {% include "public/css/tooltips.css" %}
+{% include "public/css/copyCodeButton.css" %}
 {% endcss %}
 {{ content | safe }}
 {% initClipboardJS %}
 {% js %}
 {% include "public/scripts/fadeInPhotos.js" %}
+{% include "public/scripts/copyButton.js" %}
 {% endjs %}
