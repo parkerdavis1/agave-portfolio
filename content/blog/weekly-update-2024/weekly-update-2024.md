@@ -1,8 +1,8 @@
 ---
-title: "[Weekly Update] Happy 2024!"
+title: "[Monthly Update] Happy 2024!"
 description: After an eventful holiday season, it's time to resume regular updates
 date: 2024-01-29
-updatedOn:
+updatedOn: 
 tags:
   - updates
   - weekly-update
@@ -25,36 +25,6 @@ I'm back from a brief blog hiatus. January is quickly coming to a close so I fig
 <button class="confetti" style="cursor: pointer;">...and I got engaged!</button>
 
 {% image "./engaged.jpg", "", "engage" %}
-
-<!-- ## 2023 Bird stats
-
-{% image "./ebird-stats.png", "eBird stats for 2023" %}
-
-### New life birds of 2023
-
-- Egyptian Goose\*
-- Golden-fronted Woodpecker
-- Carolina Chickadee
-- Black-crested Titmouse
-- Scissor-tailed Flycatcher
-- Monk Parakeet\*
-- White-eyed Vireo
-- Cave Swallow
-- Couch's Kingbird
-- Long-billed Thrasher
-- Yellow-throated Warbler
-- Golden-cheeked Warbler
-- Berylline Hummingbird
-- Rose-throated Becard
-- Fulvous Whistling-Duck
-- White Ibis
-- Philadelphia Vireo
-
-\* _previously seen in Phoenix but are not officially "counted", while they are considered Provisional/Naturalized in San Antonio, TX_
-
-### 2024 Bird of the Year
-
-Being the first bird I detected after the new year rolled in, 2024 is the year of the [Abert's Towhee](https://ebird.org/species/abetow). May this year be filled with many beeps and subtle beauty. -->
 
 ## Coding
 
