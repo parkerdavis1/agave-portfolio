@@ -4,7 +4,7 @@ layout: layouts/post-project.njk
 
 <div class="toc-container">
     {% if content | toc %}
-        <aside>
+        <aside class="toc-aside">
             <span class="toc-heading">Table of Contents</span>
             {{ content | toc | safe }}
         </aside>
@@ -13,13 +13,14 @@ layout: layouts/post-project.njk
         <article class="flow">
             <h1>{{ title }}</h1>
             <div class="post-metadata">
-                <div>{% if updatedOn %}Published:{% endif %}
+                <div>
+                    {% if updatedOn %}Published:{% endif %}
                     <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
                 </div>
                 {% if updatedOn %}
-                <div>Updated:
-                    <time datetime="{{ updatedOn | htmlDateString }}">{{ updatedOn | readableDate }}</time>
-                </div>
+                    <div>Updated:
+                        <time datetime="{{ updatedOn | htmlDateString }}">{{ updatedOn | readableDate }}</time>
+                    </div>
                 {% endif %}
                 {% set tags = tags | filterTagList %}
                 {% if tags.length > 0 %}

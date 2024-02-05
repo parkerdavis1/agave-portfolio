@@ -8,7 +8,7 @@ layout: layouts/post-project.njk
 {% endcss %}
 <div class="toc-container">
     {% if content | toc %}
-        <aside>
+        <aside class="toc-aside">
             <span class="toc-heading">Table of Contents</span>
             {{ content | toc | safe }}
         </aside>
@@ -24,23 +24,23 @@ layout: layouts/post-project.njk
             {{ content | safe }}
         </article>
         {# {%- if collections.projects %}
-            {%- set previousPost = collections.projects | getPreviousCollectionItem %}
-            {%- set nextPost = collections.projects | getNextCollectionItem %}
-            {%- if nextPost or previousPost %}
-                <ul class="links-nextprev">
-                    {%- if previousPost %}
-                        <li>Previous:
-                            <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-                        </li>
-                    {% endif %}
-                    {%- if nextPost %}
-                        <li>Next:
-                            <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-                        </li>
-                    {% endif %}
-                </ul>
-            {%- endif %}
-        {%- endif %} #}
+                    {%- set previousPost = collections.projects | getPreviousCollectionItem %}
+                    {%- set nextPost = collections.projects | getNextCollectionItem %}
+                    {%- if nextPost or previousPost %}
+                        <ul class="links-nextprev">
+                            {%- if previousPost %}
+                                <li>Previous:
+                                    <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+                                </li>
+                            {% endif %}
+                            {%- if nextPost %}
+                                <li>Next:
+                                    <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    {%- endif %}
+                {%- endif %} #}
         <nav class="project-nav">
             <a href="/projects/">Back to Projects</a>
         </nav>
