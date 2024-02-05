@@ -21,7 +21,6 @@ layout: layouts/base.njk
 {% endif %}
 {#   END, divs around Prism `pre``code` stuff #}
 {{ modifiedContent | safe }}
-{% initClipboardJS %}
 {% js %}
 {% include "public/scripts/copyButton.js" %}
 {% endjs %}

@@ -1,10 +1,8 @@
 const { DateTime } = require("luxon");
 
-const filteredTags = ["all", "nav", "post", "posts", "projects"]
+const filteredTags = ["all", "nav", "post", "posts", "projects"];
 function filterTagList(tags) {
-	return (tags || []).filter(
-		(tag) => filteredTags.indexOf(tag) === -1
-	);
+	return (tags || []).filter((tag) => filteredTags.indexOf(tag) === -1);
 }
 
 module.exports = (eleventyConfig) => {
@@ -56,19 +54,20 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addFilter("getAllTagsWithCount", (collection) => {
 		let tags = {};
 		for (let item of collection) {
-			(item.data.tags || []).forEach(tag => {
+			(item.data.tags || []).forEach((tag) => {
 				if (Object.keys(tags).includes(tag)) {
-					tags[tag] = tags[tag] + 1
+					tags[tag] = tags[tag] + 1;
 				} else {
-					tags[tag] = 1
+					tags[tag] = 1;
 				}
-			})
+			});
 		}
 		const sortedFilteredEntries = Object.entries(tags)
-			.filter(tagEntry => filteredTags.indexOf(tagEntry[0]) === -1)
-			.sort((a,b) => b[1] - a[1]);
-		return sortedFilteredEntries
-	})
+			.filter((tagEntry) => filteredTags.indexOf(tagEntry[0]) === -1)
+			.sort(new Intl.Collator("en-US", { sensitivity: "base" }).compare)
+			.sort((a, b) => b[1] - a[1]);
+		return sortedFilteredEntries;
+	});
 
 	eleventyConfig.addFilter("filterTagList", filterTagList);
 

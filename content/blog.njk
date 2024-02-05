@@ -1,13 +1,12 @@
 ---
 title: Blog
-layout: layouts/page.njk
+layout: layouts/includeTags.njk
 eleventyNavigation:
   key: Blog
   order: 4
 ---
-<h1>Posts</h1>
 
+<h1>Posts</h1>
 {% set postslist = collections.posts | reverse %}
 {% include "components/postslist.njk" %}
-
 {# TODO: add tags sidebar to post list #}

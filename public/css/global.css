@@ -19,6 +19,9 @@
 	--text-color: var(--color-gray-90);
 	--text-color-link: #9a4b3a;
 
+	--tag-background: var(--text-color-link);
+	--tag-foreground: white;
+
 	--syntax-tab-size: 2;
 
 	--body-width: 45rem;
@@ -88,6 +91,7 @@
 
 		/* --text-color is assigned to --color-gray-_ above */
 		--text-color-link: #accae7;
+		--tag-foreground: black;
 
 		--background-color: #15202b;
 	}
@@ -372,4 +376,8 @@ article kbd {
 	padding: 2px 4px;
 	color: black;
 	font-size: var(--step--1);
+}
+
+.columns {
+	columns: 2;
 }

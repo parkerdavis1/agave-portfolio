@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="tags-meta-container">
+    <aside class="tags-aside">
+        <h2 class="tags-heading">
+            {% include 'icons/tags.svg' %} Tags
+        </h2>
+        <div class="tags-container-blah">
+            {% for tag in collections.all | getAllTagsWithCount | head(20) %}
+                {% set tagUrl %}/tags/{{ tag[0] | slugify }}/{% endset %}
+                <div class="tag">
+                    <a href="{{ tagUrl }}">{{ tag[0] }}</a>
+                </div>
+            {% endfor %}
+        </div>
+        <p>
+            <a href="/tags/">View all</a>
+        </p>
+    </aside>
+    <main id="skip" class="flow">
+        {{ content | safe }}
+    </main>
+</div>
+{% css %}
+{% include "public/css/tags.css" %}
+{% endcss %}

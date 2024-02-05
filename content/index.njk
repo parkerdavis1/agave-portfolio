@@ -34,5 +34,7 @@ numberOfLatestPostsToShow: 5
         {% endfor %}
     </ul>
     {% set moreProjects = collections.projects | length - collections.projects | featured | length %}
-    <p><a href="/projects">View {{moreProjects}} more project{{'s' if moreProjects > 1}}</a></p>
+    <p>
+        <a href="/projects">View {{ moreProjects }} more project{{ 's' if moreProjects > 1 }}</a>
+    </p>
 </section>
