@@ -9,7 +9,7 @@ liveUrl: https://parkerdavis1.github.io/harmonic-clouds/
 featured: false
 date: 2023-09-14
 # remove below when a real page
-draft: true
+draft: false
 eleventyExcludeFromCollections: false
 ---
 
@@ -24,8 +24,6 @@ eleventyExcludeFromCollections: false
 ## Desciption
 
 A simple web application written in vanilla Javascript that plays a series of randomly generated [just intonation](https://en.wikipedia.org/wiki/Just_intonation) chords, specifically notes from the [harmonic series](<https://en.wikipedia.org/wiki/Harmonic_series_(music)>).
-
-<!-- [Just intonation](https://en.wikipedia.org/wiki/Just_intonation) means that all of the frequencies are related by whole-number ratios, as opposed to the more common [Equal temperament](https://en.wikipedia.org/wiki/Equal_temperament) where octaves are logarithmically divided. -->
 
 The notes fade in and out, the notes of each chord staggered and panned. There are no effects such as reverb or delay. There is a single lowpass filter with an envelope on each oscillator.
 
