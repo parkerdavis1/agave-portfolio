@@ -1,8 +1,8 @@
 ---
 title:
-summary:
+description:
 techtags:
-    -
+  -
 githubUrl:
 liveUrl:
 featured: false

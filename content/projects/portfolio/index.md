@@ -30,7 +30,7 @@ I started with the [eleventy-base-blog](https://github.com/11ty/eleventy-base-bl
 
 [markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor) and [eleventy-plugin-nesting-toc](https://www.npmjs.com/package/eleventy-plugin-nesting-toc) creates a Table of Contents for all posts.
 
-[@11tyrocks/eleventy-plugin-emoji-readtime](https://www.npmjs.com/package/@11tyrocks/eleventy-plugin-emoji-readtime) adds an estimated read time.
+<!-- [@11tyrocks/eleventy-plugin-emoji-readtime](https://www.npmjs.com/package/@11tyrocks/eleventy-plugin-emoji-readtime) adds an estimated read time. -->
 
 [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs) allows you to add arbitrary attributes to elements within markdown.
 

@@ -9,4 +9,42 @@ eleventyNavigation:
 <h1>
   Projects
 </h1>
-{% include "components/projects-list.njk" %}
+<h2>Featured</h2>
+{% from "components/tech-list.njk" import techlist %}
+<ul class="projects-ul">
+  {% for project in collections.projects | featured %}
+    <li class="projects-li">
+      <a class="projects-a" href="{{ project.url }}">
+        {{ project.data.title }}
+      </a>
+      <div class="tags-container">
+        {% if project.data.techtags %}
+          {{ techlist(project.data.techtags) }}
+        {% endif %}
+      </div>
+      <p class="project-description">{{ project.data.description }}</p>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2>Other</h2>
+<ul class="projects-ul">
+  {% for project in collections.projects | notFeatured %}
+    <li class="projects-li">
+      <a class="projects-a" href="{{ project.url }}">
+        {{ project.data.title }}
+      </a>
+      <div class="tags-container">
+        {% if project.data.techtags %}
+          {{ techlist(project.data.techtags) }}
+        {% endif %}
+      </div>
+      <p class="project-description">{{ project.data.description }}</p>
+    </li>
+  {% endfor %}
+</ul>
+
+
+{% css %}
+{% include "public/css/projects-list.css" %}
+{% endcss %}

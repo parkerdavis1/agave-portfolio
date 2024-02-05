@@ -74,4 +74,8 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addFilter("featured", (collection) => {
 		return collection.filter((x) => x.data.featured);
 	});
+
+	eleventyConfig.addFilter("notFeatured", (collection) => {
+		return collection.filter((x) => !x.data.featured);
+	});
 };
