@@ -1,6 +1,6 @@
 ---
 title: Harmonic Clouds
-description: A small application to play randomly generated just-intonation chords
+description: A small application to play randomly generated chords based on the harmonic series
 techtags:
   - Javascript
   - Web Audio API
@@ -29,8 +29,8 @@ The notes fade in and out, the notes of each chord staggered and panned. There a
 
 The result is that of a harmonic wave. I find it surprisingly beautiful and meditative, especially considering the minimal materials: a few browser oscillators, filters, and envelopes.
 
-The interface allows you to choose the wave type, lowpass filter frequency, filter Q, filter envelope shape, the number of notes for each chord, and the "harmonic limit" (how high up in the harmonic series frequencies will be chosen from).
+The interface allows you to choose the wave type, lowpass filter frequency, filter Q, filter envelope shape, the number of notes for each chord, and the "harmonic limit" (how high up in the harmonic series notes will be chosen from).
 
 The checkboxes next to each input randomize that specific parameter for each chord.
 
-The "Rest" button will stop the generation of new chords but will let the current chord finish its cycle.
+The "Rest" button will stop the generation of new chords but will let the current chord finish its iteration.
