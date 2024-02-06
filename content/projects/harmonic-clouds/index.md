@@ -1,6 +1,6 @@
 ---
 title: Harmonic Clouds
-description: A small application to play randomly generated chords based on the harmonic series
+description: A small application to play randomly generated chords based on the harmonic series.
 techtags:
   - Javascript
   - Web Audio API

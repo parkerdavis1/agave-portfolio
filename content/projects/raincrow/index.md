@@ -2,15 +2,16 @@
 title: RainCrow
 description: Automatically gather weather data for eBird checklists using historical weather APIs. Used by thousands of people every week.
 techtags:
-    - Svelte/Sveltekit
-    - HTML
-    - CSS
-    - Javascript
+  - Svelte/Sveltekit
+  - HTML
+  - CSS
+  - Javascript
 githubUrl: https://github.com/parkerdavis1/raincrow-sveltekit
-liveUrl: https://raincrow.netlify.app/
+liveUrl: https://raincrow.app/
 featured: true
 date: 2023-11-16
 ---
+
 ## Links
 
 {% include "components/project-links.njk" %}
