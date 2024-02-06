@@ -23,7 +23,7 @@ eleventyExcludeFromCollections: false
 
 ## Desciption
 
-A simple web application written in vanilla Javascript that plays a series of randomly generated [just intonation](https://en.wikipedia.org/wiki/Just_intonation) chords, specifically notes from the [harmonic series](<https://en.wikipedia.org/wiki/Harmonic_series_(music)>).
+A simple web application written in vanilla Javascript using the Web Audio API. It plays a series of randomly generated [just intonation](https://en.wikipedia.org/wiki/Just_intonation) chords, specifically notes from the [harmonic series](<https://en.wikipedia.org/wiki/Harmonic_series_(music)>).
 
 The notes fade in and out, the notes of each chord staggered and panned. There are no effects such as reverb or delay. There is a single lowpass filter with an envelope on each oscillator.
 
