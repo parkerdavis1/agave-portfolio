@@ -6,6 +6,11 @@ techtags:
   - HTML
   - CSS
   - Javascript
+tags:
+  - svelte/sveltekit
+  - html
+  - css
+  - javascript
 githubUrl: https://github.com/parkerdavis1/raincrow-sveltekit
 liveUrl: https://raincrow.app/
 featured: true

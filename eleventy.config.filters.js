@@ -1,6 +1,6 @@
 const { DateTime } = require("luxon");
 
-const filteredTags = ["all", "nav", "post", "posts", "projects"];
+const filteredTags = ["all", "nav", "post", "posts"];
 function filterTagList(tags) {
 	return (tags || []).filter((tag) => filteredTags.indexOf(tag) === -1);
 }

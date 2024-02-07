@@ -338,6 +338,7 @@ code {
 /* Direct Links / Markdown Headers */
 article {
 	position: relative;
+	margin-bottom: 2rem;
 }
 .header-anchor {
 	text-decoration: none;

@@ -8,6 +8,13 @@ techtags:
   - HTML
   - CSS
   - Javascript
+tags:
+  - eleventy
+  - luxon
+  - prism
+  - html
+  - css
+  - javascript
 githubUrl: https://github.com/parkerdavis1/agave-portfolio
 liveUrl: https://parkerdavis.dev/
 v1: https://v1.parkerdavis.dev

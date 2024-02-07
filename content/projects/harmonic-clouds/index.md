@@ -11,6 +11,9 @@ date: 2023-09-14
 # remove below when a real page
 draft: false
 eleventyExcludeFromCollections: false
+tags:
+  - javascript
+  - web-audio
 ---
 
 ## Links

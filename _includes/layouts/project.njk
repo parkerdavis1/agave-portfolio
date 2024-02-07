@@ -16,31 +16,25 @@ layout: layouts/post-project.njk
     <main id="skip" class="flow">
         <article class="flow">
             <h1>{{ title }}</h1>
-            <div class="tags-container tags-container-post">
-                {% include "icons/tags.svg" %}
-                {% from "components/tech-list.njk" import techlist %}
-                {{ techlist(techtags) }}
+            <div class="tags-container tags-container-post post-metadata">
+                {# {% include "icons/tags.svg" %} #}
+                {# {% from "components/tech-list.njk" import techlist %} #}
+                {# {{ techlist(techtags) }} #}
+                    {% if tags.length > 0 %}
+                        <div class="tags-container"> {% include "icons/tags.svg" %}
+                        {%- for tag in tags | filterTagList %}
+                            {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                            <span>
+                                <a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a>
+                                {%- if not loop.last %},
+                                {% endif %}
+                            </span>
+                        {%- endfor %}
+                    </div>
+                {% endif %}
             </div>
             {{ content | safe }}
         </article>
-        {# {%- if collections.projects %}
-                    {%- set previousPost = collections.projects | getPreviousCollectionItem %}
-                    {%- set nextPost = collections.projects | getNextCollectionItem %}
-                    {%- if nextPost or previousPost %}
-                        <ul class="links-nextprev">
-                            {%- if previousPost %}
-                                <li>Previous:
-                                    <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-                                </li>
-                            {% endif %}
-                            {%- if nextPost %}
-                                <li>Next:
-                                    <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-                                </li>
-                            {% endif %}
-                        </ul>
-                    {%- endif %}
-                {%- endif %} #}
         <nav class="project-nav">
             <a href="/projects/">Back to Projects</a>
         </nav>
