@@ -11,6 +11,8 @@ draft: false
 eleventyExcludeFromCollections: false
 ---
 
-I got around to writing a bit about a small musical web application I made in the fall. Worth a listen, [check it out](https://parkerdavis1.github.io/harmonic-clouds/).
+I got around to writing a bit about a small musical web application I made in the fall.
+
+[Give it a listen](https://parkerdavis1.github.io/harmonic-clouds/)
 
 You can read about it on the new [project page](/projects/harmonic-clouds).
