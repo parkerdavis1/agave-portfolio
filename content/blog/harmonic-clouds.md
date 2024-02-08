@@ -10,9 +10,6 @@ tags:
 draft: false
 eleventyExcludeFromCollections: false
 ---
-
-I got around to writing a bit about a small musical web application I made in the fall.
+I got around to writing a bit about a small musical web application I made in the fall. You can read about it on the new [project page](/projects/harmonic-clouds).
 
 [Give it a listen](https://parkerdavis1.github.io/harmonic-clouds/)
-
-You can read about it on the new [project page](/projects/harmonic-clouds).
