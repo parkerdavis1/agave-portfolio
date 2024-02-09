@@ -12,6 +12,7 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <meta name="generator" content="{{ eleventy.generator }}">
         <meta name="description" content="{{ description or metadata.description }}">
+        <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
         {% if metadata.socialImg %}
             <!-- Open Graph -->
             <meta property="og:type" content="website">
