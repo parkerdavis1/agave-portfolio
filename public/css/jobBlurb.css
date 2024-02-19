@@ -1,10 +1,12 @@
 .footer-alert {
 	border: 4px var(--text-color) double;
-	padding: 2rem 2rem;
+	padding: 2rem 1rem;
+	margin: 1rem;
 	display: grid;
-	gap: 2rem;
+	gap: 1rem;
 	grid-template-columns: auto minmax(0, 1fr);
 	align-items: center;
+	word-break: break-word;
 }
 
 .footer-alert .current-date {
