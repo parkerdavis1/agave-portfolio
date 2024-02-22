@@ -37,7 +37,7 @@ Press <kbd>return</kbd> to update the package.json. It will ask if you want to i
 When updating a project, it is generally a good idea to progressively update dependencies. Things can break and it is much easier to sort through smaller chunks of changes. 
 ### Semantic Versioning (major.minor.patch)
 
-Assuming the dependencies are using good semantic versioning practices, you can usually safely update patches without too much trouble. I often install the minor updates together then test the project. For major updates, I install them one by one after reading the change logs for each package. 
+You can usually safely update patch updates without too much trouble. I often install the minor updates together then test the project to make sure nothing broke. For major updates, I install them one by one after reading the change logs for each package then test.
 ## Links
 
 [Free Code Camp Article](https://www.freecodecamp.org/news/how-to-update-npm-dependencies/)
