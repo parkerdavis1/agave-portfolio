@@ -17,12 +17,12 @@ Install npm-check-updates globally (add a sudo if needed)
 npm install -g npm-check-updates
 ```
 
-View Updates Available for project directory
+View updates available for project in current directory
 ```shell
 ncu
 ```
 
-Interactive mode:
+Interactive mode
 ```shell
 ncu -i
 ```
@@ -40,6 +40,6 @@ When updating a project, it is generally a good idea to progressively update dep
 You can usually safely update patch updates without too much trouble. I often install the minor updates together then test the project to make sure nothing broke. For major updates, I install them one by one after reading the change logs for each package then test.
 ## Links
 
-[Free Code Camp Article](https://www.freecodecamp.org/news/how-to-update-npm-dependencies/)
-
 [npm-check-updates documentation](https://github.com/raineorshine/npm-check-updates)
+
+[Free Code Camp Article](https://www.freecodecamp.org/news/how-to-update-npm-dependencies/)
