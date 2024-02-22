@@ -2,12 +2,12 @@
 title: htmz - a low power tool for html
 description: A cool javascript not-framework for loading HTML snippets without full page reloads
 date: 2024-02-23
-updatedOn:
+updatedOn: 
 tags:
-    - html
-    - javascript
-    - htmz
-draft: true
+  - html
+  - javascript
+  - htmz
+draft: false
 eleventyExcludeFromCollections: false
 ---
 
@@ -91,7 +91,7 @@ So, in total, the onload function grabs the HTML element (with the ID from the h
 
 ## In Conclusion
 
-Go check out the examples on [htmz](https://leanrada.com/htmz/). There are some complex UIs that can be created with _very_ little javascript. Its a cool option for loading simple interactive content within a page.
+Go check out the examples on [htmz](https://leanrada.com/htmz/). There are some complex UIs that can be created with _very_ little javascript. I'd probably reach for something else if its too complex but its a cool option for loading simple interactive content within a page.
 
 <a href="./see/index.html#load-cow" target="htmz">See</a>
 <a href="./what/index.html#load-cow" target="htmz">what</a>

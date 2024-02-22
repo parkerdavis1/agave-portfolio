@@ -36,11 +36,9 @@
         {% css "reset" %}
         {% include "public/css/modern-normalize.css" %}
         {% include "public/css/reset.css" %}
-        {% endcss %}
-        <style>
-            {% getBundle "css", "reset" %}
-            {% getBundle "css" %}
-        </style>
+        {% endcss %} <link rel="stylesheet" href="{% getBundleFileUrl "css", "reset" %}">
+        <link
+        rel="stylesheet" href="{% getBundleFileUrl "css" %}">
         <!-- plausible analytics -->
         <script
             defer

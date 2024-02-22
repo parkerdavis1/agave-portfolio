@@ -10,10 +10,10 @@ const {
 } = require("@11ty/eleventy");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const pluginTOC = require("eleventy-plugin-nesting-toc");
-const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
-// const lightningCss = require("@11tyrocks/eleventy-plugin-lightningcss");
 const markdownItAttrs = require("markdown-it-attrs");
-const pluginCodeClipboard = require("eleventy-plugin-code-clipboard");
+// const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
+// const lightningCss = require("@11tyrocks/eleventy-plugin-lightningcss");
+// const pluginCodeClipboard = require("eleventy-plugin-code-clipboard");
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
@@ -39,16 +39,16 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginDrafts);
 	eleventyConfig.addPlugin(pluginImages);
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
-	eleventyConfig.addPlugin(pluginWebc, {
-		components: "src/_includes/components/*.webc",
-	});
 	eleventyConfig.addPlugin(pluginTOC);
-	eleventyConfig.addPlugin(emojiReadTime, {
-		showEmoji: false,
-		label: "min read",
-	});
+	// eleventyConfig.addPlugin(pluginWebc, {
+	// 	components: "src/_includes/components/*.webc",
+	// });
+	// eleventyConfig.addPlugin(emojiReadTime, {
+	// 	showEmoji: false,
+	// 	label: "min read",
+	// });
 	// eleventyConfig.addPlugin(lightningCss);
-	eleventyConfig.addPlugin(pluginCodeClipboard);
+	// eleventyConfig.addPlugin(pluginCodeClipboard);
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginRss);
