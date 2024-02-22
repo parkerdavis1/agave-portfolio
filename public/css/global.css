@@ -191,6 +191,11 @@ a:active {
 	color: var(--text-color);
 }
 
+blockquote {
+	padding-left: 1rem;
+	border-left: 2px var(--text-color-link) solid;
+}
+
 article a,
 article a:visited,
 article a:hover,
