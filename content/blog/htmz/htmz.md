@@ -85,7 +85,7 @@ So, the content is loaded in the hidden iframe then copied wherever you specify.
 >
 > Like how a proxy server forwards requests to some specified server, proxy target htmz forwards responses into some specified target."
 
-Go check out the examples on [htmz](https://leanrada.com/htmz/). There are some complex UIs that can be created with _very_ little client-side javascript. I'd probably reach for something else if my needs were *too* complex but it's a cool technique for loading simple interactive content within a page.
+Go check out the examples on [htmz](https://leanrada.com/htmz/). There are some complex UIs that can be created with _very_ little client-side javascript. I probably wouldn't reach for this if my needs were *too* complex but it's a cool technique for loading simple interactive content within a page.
 
 <a href="./see/index.html#load-cow" target="htmz">See</a>
 <a href="./what/index.html#load-cow" target="htmz">what</a>
