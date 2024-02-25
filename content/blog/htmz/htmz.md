@@ -11,7 +11,7 @@ draft: false
 eleventyExcludeFromCollections: false
 ---
 
-I came across [htmz](https://leanrada.com/htmz/) this week and after a few chuckles reading through the landing page I was excited to try it out. Its a really fun and clever way to swap HTML fragments without full page reloads using a super minimal script (~166 bytes).
+I came across **`htmz`** this week and after a few chuckles reading through the landing page I was excited to try it out. Its a really fun and clever way to swap HTML fragments without full page reloads using a super minimal script (~166 bytes).
 
 This is essentially all there is to it:
 
@@ -20,6 +20,7 @@ This is essentially all there is to it:
 ></iframe>
 ```
 
+The [htmz website](https://leanrada.com/htmz/) gives a good and engaging overview so I direct your attention there first. The purpose of *this* post is to go through, element by element, what each piece of the snippet does and explain to myself, in more detail than necessary, exactly how it works. 
 ## What does this snippet do?
 
 
@@ -61,7 +62,7 @@ First up, there's an optional setTimeout to add the function call to the end of 
 
 Then, it searches the `document` with a `querySelector`.
 
-The query selector starts with `frame`, the parameter of the function. When you pass in `this` as the argument on the iframe onload function call, it refers to itself, the iframe html element. This self-referential pointing around is omitted in the condensed all-in-one snippet.
+The query selector starts with `frame`, the parameter of the function. When you pass in `this` as the argument on the iframe onload function call, it refers to itself, the iframe html element. (This self-referential pointing around is omitted in the condensed all-in-one snippet.)
 
 [.contentWindow](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow) – returns the window object of the embedded iframe
 
