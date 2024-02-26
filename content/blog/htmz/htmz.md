@@ -20,7 +20,7 @@ This is essentially all there is to it:
 ></iframe>
 ```
 
-The [htmz website](https://leanrada.com/htmz/) gives a good and engaging overview so I direct your attention there first. The purpose of *this* post is to go through, element by element, what each piece of the snippet does and explain to myself, in more detail than necessary, exactly how it works. 
+The [htmz website](https://leanrada.com/htmz/) gives a good and engaging overview so I direct your attention there first. The purpose of *this* post is to go through what each piece of the snippet does and explain to myself, in more detail than necessary, exactly how it works. 
 ## What does this snippet do?
 
 
