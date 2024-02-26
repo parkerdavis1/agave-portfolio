@@ -4,6 +4,8 @@ layout: layouts/base.njk
 
 {% css %}
 {% include "public/css/prism/prism-lucario.css" %}
+{# {% include "public/css/prism/prism-dracula.css" %} #}
+{# {% include "public/css/prism/prism-ghcolors.css" %} #}
 {% include "public/css/prism/prism-diff.css" %}
 {% include "public/css/toc.css" %}
 {% include "public/css/tooltips.css" %}
@@ -15,9 +17,9 @@ layout: layouts/base.njk
 {% set withDivStart = '<div class="highlight"><pre class="language-' %}
 {% set withoutDivEnd = '</code></pre>' %}
 {% set withDivEnd = '</code></pre></div>' %}
-{% if withoutDivStart in content %}
+    {% if withoutDivStart in content %}
     {% set modifiedContent = content | replace (withoutDivStart, withDivStart) %}
-    {% set modifiedContent = modifiedContent | replace (withoutDivEnd, withDivEnd) %}
+{% set modifiedContent = modifiedContent | replace (withoutDivEnd, withDivEnd) %}
 {% endif %}
 {#   END, divs around Prism `pre``code` stuff #}
 {{ modifiedContent | safe }}
