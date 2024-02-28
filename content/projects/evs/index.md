@@ -39,7 +39,7 @@ date: 2023-11-16
 
 ## Screenshot
 
-{% image "./EVS-light.png", "EVS screenshot" %}
+{% animatedImage "./EVS-action4.gif", "EVS in action" %}
 
 ## Overview
 
@@ -47,8 +47,7 @@ I collaborated closely with other developers to create an application that allow
 
 ## Contributions
 
-My github pull requests for this project can be found [here](https://github.com/opportunity-hack/evs/pulls?q=is%3Apr+author%3Aparkerdavis1+).
-
+A overview of my contributions can be found [here](https://github.com/opportunity-hack/evs/graphs/contributors).
 ### Summary
 
 - UI/UX optimizations
@@ -58,6 +57,8 @@ My github pull requests for this project can be found [here](https://github.com/
   - [Removes horse from events during cooldown period and alerts user of these changes](https://github.com/opportunity-hack/evs/pull/43)
   - [Prevents horse from being scheduled to new events during cooldown period](https://github.com/opportunity-hack/evs/pull/47)
 - [Added feature to allow the creation of events on multiple dates](https://github.com/opportunity-hack/evs/pull/54)
+- Added automated testing
+- UX improvement allowing a user's height to be inputed in feet and inches, with error handling, validation, and processing that links the two input fields.
 
 ## Recognition
 
