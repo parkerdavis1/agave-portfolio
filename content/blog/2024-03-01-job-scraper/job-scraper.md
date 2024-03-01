@@ -67,11 +67,11 @@ Overall, it works great, saves time, and offloads a lot of mental energy. No mor
 
 ## Optimizations
 
-I have no intention of actually making this a web app so the separation of client and server is probably an unnecessary over-complication. There's no reason to make database calls only from the server if the server and client are both on my laptop saving to a database on my laptop. If I were to build it again, I might instead go SPA-style and use [Tauri](https://tauri.app/) to make it a desktop app (no more revving up the dev server before running the app, precious seconds and keystrokes saved!).
+I have no intention of actually making this a web app so the separation of client and server is probably an unnecessary over-complication. There's no reason to make database calls only from the server if the server and client are both on my computer saving to a database on my computer. If I were to build it again, I might instead go SPA-style and use [Tauri](https://tauri.app/) to make it a desktop app (no more revving up the dev server before running the app, precious seconds and keystrokes saved!).
 
 When I click "Get New Jobs" it takes a bit of time to scrape through all the sites. A lot of this is unavoidable, scraping takes time, but there are some optimizations to be had.
 
-First draft I had it iterating through an array of job scripts, scraping each site one after the other. Not the best.
+In the first draft I had it iterating through an array of job scripts, scraping each site one after the other. Not the best.
 
 ```js
 for (const jobGetFunction of arrayOfJobGetters) {
@@ -121,7 +121,7 @@ try {
 }
 ```
 
-The next obvious optimization would be to take the best of both of these approaches and wrap each script in a write to database function so the data is saved immediately as it becomes available. Then each script runs in parallel _and_ the data is immediately saved. This also allows data to be extracted and saved even if one of the scripts throws an error. Maybe I'll go do that right now...
+The next obvious optimization would be to take the best of both of these approaches and wrap each script in a write_to_database function so the data is saved immediately as it becomes available. Then each script runs in parallel _and_ the data is immediately saved. This also allows the extracted data to be saved even if one of the other scripts throws an error. Maybe I'll go do that right now...
 
 ...and here we go:
 
@@ -167,6 +167,6 @@ export const actions = {
 }
 ```
 
-There are lots of things I could add to the UI/UX side of things, but at this point it is just for my own use and I really don't need much.
+Of course I could keep going and adding more features but for now this works great. The tool is built, now I've got to use it. 
 
 If you're curious, you can find the git repo here: [https://github.com/parkerdavis1/jobscraper/](https://github.com/parkerdavis1/jobscraper/)
