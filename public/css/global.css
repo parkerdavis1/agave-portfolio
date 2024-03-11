@@ -122,6 +122,19 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 }
+
+.flex {
+	display: flex;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.gap-4 {
+	gap: 1rem;
+}
+
 /* flow  */
 .flow > * + * {
 	margin-block-start: var(--flow-space, 1em);
