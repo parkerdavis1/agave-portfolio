@@ -13,23 +13,23 @@ tags:
 draft: false
 eleventyExcludeFromCollections: false
 ---
-On Sunday I came across two fascinating and coincidentally convergent things that I'll share with you: a paper on songbird sound cognition that demonstrates just how differently European Starlings hear the world than humans, and a coding talk that was really all about bird song, music, and just intonation, among other things. 
+On Sunday I came across two fascinating and coincidentally convergent things that I'll share with you here: a paper on songbird sound cognition that demonstrates just how differently European Starlings hear the world than humans, and a coding talk that was really all about bird song, music, and just intonation. 
 
 ## Songsbird use spectral shape, not pitch, for sound pattern recognition
 
->Past work characterizes songbirds as having a strong bias to rely on absolute pitch for the recognition of tone sequences. In a series of behavioral experiments, we find that the **human percepts of both pitch and timbre are poor descriptions of the perceptual cues used by birds for melody recognition**. We suggest instead that auditory sequence recognition in some species reflects more **direct perception of acoustic spectral shape**. Signals that preserve this shape, even in the absence of pitch, allow for generalization of learned patterns.
+>"Past work characterizes songbirds as having a strong bias to rely on absolute pitch for the recognition of tone sequences. In a series of behavioral experiments, we find that the **human percepts of both pitch and timbre are poor descriptions of the perceptual cues used by birds for melody recognition**. We suggest instead that auditory sequence recognition in some species reflects more **direct perception of acoustic spectral shape**. Signals that preserve this shape, even in the absence of pitch, allow for generalization of learned patterns."
 
 You can find the paper [here](https://www.pnas.org/doi/abs/10.1073/pnas.1515380113) and the supporting materials [here](https://www.pnas.org/doi/suppl/10.1073/pnas.1515380113/suppl_file/pnas.201515380si.pdf).
 
-The study design was essentially asking a starling to determine whether a sequence of musical sounds was ascending or descending in pitch. They would get a treat if they chose the correct "response port" (Fig 1 A). 
+The study design was essentially asking starlings to determine whether a sequence of musical sounds was ascending or descending in pitch. They would get a treat if they chose the correct "response port" (Fig 1 A). 
 
-The birds would have a training block on certain musical sequences, then afterwards would be tested on variations of the musical sequences. The researchers assume if the birds recognized the new sequences as being similar to the training sequences, they would be able to choose the "correct" response port more reliably.
+The birds would have a training session on certain musical sequences, then afterwards would be tested on variations of the musical sequences. The researchers assume if the birds recognized the new sequences as being similar to the training sequences, they would be able to choose the "correct" response port more quickly and reliably.
 
 {% image "./figure1.png", "Figure 1 from the study" %}
 
 ## Transposition
 
-When tested with variations that preserve the melody and timbre but were transposed up or down, the starlings performed poorly on the tests.
+When tested with variations that preserve melody and timbre but are transposed up or down, the starlings performed poorly on the tests.
 
 Here is one of the musical sequences the starlings were trained on where the notes are ascending a whole-tone scale, with different timbres for each note (synesthetically shown in Fig 1 B above: first a blue oboe, then a red choir "aah", then a green muted trumpet, then a purple synthesizer): 
 
@@ -42,7 +42,7 @@ Here is a test sequence where the relative changes in pitch and timbre are the s
 
 
 
-The fact that the starlings did not recognize the transposed melody seems to support bird cognition based on absolute pitch as was previously thought. A song sung in a different key is perceived as a completely different song to the starlings. Surprising! 
+The fact that the starlings did not recognize the transposed melody seems to support bird cognition based on absolute pitch as was previously thought. A song sung in a different key is perceived as a completely different song to the starlings. Apparently this is old news, but it is still intuitively surprising! 
 
 ## Timbre
 
@@ -50,9 +50,9 @@ I'm going to try not to get all the way into it, but timbre (pronounced "tamber"
 
 For example, when someone blasts a trumpet, we hear it as bright because the amplitudes of the overtones are strong relative to the fundamental frequency. When a trumpet plays with a mute, it can sound "nasal" because the fundamental frequency is muted so much that the overtones are louder than the base frequency. A flute is relatively "pure" because the overtones are muted compared to the fundamental tone. 
 
-Whatever the timbre might be, we hear all of these overtones as fundamentally related, so much so that it is difficult for us to pick out the individual parts of the sound. It just sounds like a single sound with a certain quality, or timbre.
+Whatever the timbre might be, we hear all of these overtones as related, so much so that it is difficult for us to pick out the individual parts of the sound. It just sounds like a single sound with a certain quality to it, a.k.a. timbre.
 
-When the researchers changed the timbre but preserved the fundamental frequencies of the melody (same melody, different instrument), starlings were similarly unable to recognize the melodies and performed poorly on the tests.
+When the researchers changed the timbre but preserved the fundamental frequencies of the melody (same melody, different instrument), starlings were again unable to recognize the melodies and performed poorly on the tests.
 
 Original trained sequence:
 <audio src="./pnas.1515380113.sa01.wav" controls></audio>
@@ -62,7 +62,9 @@ Same pitches, different timbre (all piano):
 <div class="flex items-center gap-4"><audio src="./pnas.1515380113.sa06.wav" controls></audio>
 <span>❌</span></div>
 
-This is unexpected... to our ears these sequences are very similar. The base frequencies must not be the primary cognitive anchor for the birds. This is what the authors mean by "human percepts of both pitch and timbre are poor descriptions of the perceptual cues used by birds for melody recognition". 
+This is unexpected... to our ears these sequences are very similar. The base frequencies must not be the primary cognitive anchor for the birds. 
+
+>"...human percepts of both pitch and timbre are poor descriptions of the perceptual cues used by birds for melody recognition."
 
 ## Spectral shape
 
@@ -70,7 +72,7 @@ Here we go. Spectral shape. I think the easiest way to think about spectral shap
 
 <iframe src="https://macaulaylibrary.org/asset/125582211/embed" height="383" width="100%" frameborder="0" allowfullscreen></iframe>
 
-Visually you can see that each sound has a particular shape. You can interpret the spectrogram in relation to how we hear it: the thin dark lines are more "tone-like" and the rougher blurry looking sounds are more "noisy", they move up and down, etc. 
+Visually you can see that each sound has a particular shape. You can interpret the spectrogram in relation to how we hear it: the thin dark lines are more "tone-like" and the rougher blurry looking sounds are more "noisy", lines move up and down as the pitch gets higher or lower, etc. 
 
 When more of the spectral shape is preserved, but the tonal frequencies are obscured using a noise vocoder, the starlings performed very well on the tests!
 
@@ -107,7 +109,7 @@ Whatever birds' intents may be, that doesn't mean we can't listen to bird song a
 
 It was given at a tech conference and has live coding throughout, but really it is a music and bird sound talk. Depending on your mood and disposition, there is a very funny/transcendent musical jam at the end. I suggest you check it out. 
 
-Birds are very sonically participatory and attuned, a large part of why I find them so fascinating. It seems their experience of sound is wildly different than our own. 
+Birds are one of the more sonically participatory groups of animals, a large part of why I find them so fascinating. Birds make sound. It seems their experience of sound is wildly different than our own though.
 
 How does the starling hear the world?
 
