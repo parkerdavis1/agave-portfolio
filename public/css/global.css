@@ -379,6 +379,7 @@ h2 + .header-anchor {
 	font-size: 1.5em;
 }
 
+
 /* post formatting utilities */
 .small-image {
 	width: 50%;
@@ -403,4 +404,8 @@ article kbd {
 
 .columns {
 	columns: 2;
+}
+
+cite {
+	font-size: var(--step--1);
 }
