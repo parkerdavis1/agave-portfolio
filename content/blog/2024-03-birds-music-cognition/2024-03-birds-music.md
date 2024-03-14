@@ -1,7 +1,7 @@
 ---
 title: Birds, Music, Cognition
 description: A paper and talk that sit squarely in my areas of interest.
-date: 2024-03-11
+date: 2024-03-14
 updatedOn: 
 tags:
   - birds
@@ -15,9 +15,9 @@ eleventyExcludeFromCollections: false
 ---
 On Sunday I came across two fascinating and coincidentally convergent things that I'll share with you: a paper on songbird sound cognition that gives us a hint at just how differently European Starlings hear the world than humans, and a coding talk that was really all about bird song, music, and just-intonation. 
 
-## Songsbird use spectral shape, not pitch, for sound pattern recognition
+## Songbirds use spectral shape, not pitch, for sound pattern recognition
 
-You can find the paper [here](https://www.pnas.org/doi/abs/10.1073/pnas.1515380113) and the supporting materials [here](https://www.pnas.org/doi/suppl/10.1073/pnas.1515380113/suppl_file/pnas.201515380si.pdf). The Significance section gives a succinct summary:
+You can find the paper [here](https://www.pnas.org/doi/abs/10.1073/pnas.1515380113) and the supporting materials [here](https://www.pnas.org/doi/suppl/10.1073/pnas.1515380113/suppl_file/pnas.201515380si.pdf). The "Significance" section gives a succinct summary:
 
 >"Past work characterizes songbirds as having a strong bias to rely on absolute pitch for the recognition of tone sequences. In a series of behavioral experiments, we find that the **human percepts of both pitch and timbre are poor descriptions of the perceptual cues used by birds for melody recognition**. We suggest instead that auditory sequence recognition in some species reflects more **direct perception of acoustic spectral shape**. Signals that preserve this shape, even in the absence of pitch, allow for generalization of learned patterns." <cite><a href="https://www.pnas.org/doi/abs/10.1073/pnas.1515380113">(Bregman, et al., 2016)</a></cite>
 
@@ -73,7 +73,7 @@ Here we go. Spectral shape. I think the easiest way to think about spectral shap
 
 <iframe src="https://macaulaylibrary.org/asset/125582211/embed" height="383" width="100%" frameborder="0" allowfullscreen></iframe>
 
-Visually you can see that each sound has a particular shape. You can interpret the spectrogram in relation to how we hear it: the thin dark horizontal lines are more "tone-like" and the rougher blurry looking sounds are more "noisy", etc. 
+Visually you can see that each sound has a particular shape. You can interpret the shapes in relation to how we hear it: the thin dark horizontal lines are more "tone-like" and the rougher blurry looking sounds are more "noisy", etc. 
 
  <!-- With more of the spectral shape preserved and the tonal frequencies obscured using a filtering tool called a noise vocoder
 
@@ -98,7 +98,7 @@ Moving from left to right in each spectrogram, visually the first note looks lik
 
 >One interpretation of these results is that the percepts of both pitch and timbre provide relatively poor descriptions of the perceptual cues available to starlings. We reasoned instead that starlings may rely on a perception of each tone based on its absolute spectral envelope (i.e., the overall pattern of spectral amplitudes across particular frequency bands) rather than abstracted features derived from the fundamental frequency (AP) or on the relative power in the harmonics (timbre). <cite><a href="https://www.pnas.org/doi/abs/10.1073/pnas.1515380113">(Bregman, et al., 2016)</a></cite>
 
-Every aspect of these test results is surprising and unintuitive to me. Its hard to imagine how they must be hearing things, but maybe it is not as strange as it seems...
+Every one of these results is surprising and unintuitive to me. Its hard to imagine how they must be hearing things, but maybe it is not as strange as it seems...
 
 ## Bird song is not music?
 
@@ -106,9 +106,9 @@ At the end of the paper, there is a tantalizing suggestion:
 
 >In humans, speech recognition is famously robust to the pitch-degrading manipulations introduced by noise vocoders (43), whereas similar manipulations have severe impacts on music perception (44). Our observation that birds rely on spectral shape features to recognize sound sequences suggests a similarity to human speech recognition. <cite><a href="https://www.pnas.org/doi/abs/10.1073/pnas.1515380113">(Bregman, et al., 2016)</a></cite>
 
-If you run music through a noise vocoder, most people would have a hard time picking out the tune or even recognizing it as music. We *are* able to understand speech when similarly manipulated though. When someone whispers to you, it is sort of like running their normal speaking voice through a noise vocoder. Certain aspects of the spectral shape are preserved and we're still able to pick out the vowels and consonants. We're able to understand what is being said. 
+If you run music through a noise vocoder, most people would have a hard time picking out the tune or even recognizing it as music. We *are* able to understand speech when similarly manipulated though. When someone whispers to you, it is sort of like running their normal speaking voice through a noise vocoder – certain aspects of the spectral shape are preserved and we're still able to pick out the vowels and consonants. We're able to understand what is being said. 
 
-Bird song cognition may be neurologically more closely related to our own speech cognition than music cognition. *Bird "song" may be more like speaking than singing*. 
+These results suggest bird song cognition may be neurologically more closely related to our own speech cognition than music cognition. *Bird "song" may be more like speaking than singing*. 
 
 Let that sink in for a moment. 
 
