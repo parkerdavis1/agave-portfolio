@@ -1,5 +1,5 @@
 .footer-alert {
-	border: 4px var(--text-color) double;
+	border: 1px var(--text-color) solid;
 	padding: 2rem 1rem;
 	margin: 1rem;
 	display: grid;
@@ -7,6 +7,10 @@
 	grid-template-columns: auto minmax(0, 1fr);
 	align-items: center;
 	word-break: break-word;
+
+	svg {
+		color: var(--text-color);
+	}
 }
 
 .footer-alert .current-date {

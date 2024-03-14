@@ -28,6 +28,7 @@ module.exports = function (eleventyConfig) {
 		"./public/": "/",
 	});
 	eleventyConfig.addPassthroughCopy("content/**/*.m4a");
+	eleventyConfig.addPassthroughCopy("content/**/*.wav");
 
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets

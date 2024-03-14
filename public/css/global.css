@@ -123,15 +123,29 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 }
+
+.flex {
+	display: flex;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.gap-4 {
+	gap: 1rem;
+}
+
 /* flow  */
 .flow > * + * {
 	margin-block-start: var(--flow-space, 1em);
 }
+
 :is(h1, h2, h3, blockquote) {
 	--flow-space: 1.5em;
 }
 
-:is(h1, h2, h3) + * {
+:is(h1, h2, h3) + *:not(blockquote) {
 	--flow-space: 0.5em;
 }
 
@@ -366,6 +380,7 @@ h2 + .header-anchor {
 	font-size: 1.5em;
 }
 
+
 /* post formatting utilities */
 .small-image {
 	width: 50%;
@@ -390,4 +405,8 @@ article kbd {
 
 .columns {
 	columns: 2;
+}
+
+cite {
+	font-size: var(--step--1);
 }
