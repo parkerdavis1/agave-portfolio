@@ -9,9 +9,9 @@ tags:
 draft: false
 eleventyExcludeFromCollections: false
 ---
-I'm enjoying using an RSS feed reader lately. You can stay up to date with sites of all types without having to sift through all the email and social media noise. When I feel like reading something, I just open up my feed reader and read something from the feeds!
+I'm enjoying using an RSS feed reader lately. You can stay up to date with sites of all types without having to sift through all the email and social media noise. When I feel like reading something, I open up my feed reader and read from the feeds!
 
-macOS/iOS has a great free feedreader called [NetNewsWire](https://netnewswire.com/) but there are [others](https://aboutfeeds.com).
+macOS/iOS has a great free option called [NetNewsWire](https://netnewswire.com/) but there are [others](https://aboutfeeds.com).
 ## What is an RSS feed?
 
 Check out [About Feeds](https://aboutfeeds.com/), it'll tell you all you need to know. 
